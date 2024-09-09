@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>第一章 - LiLeyi's Notes</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u7b2c\u4e00\u7ae0";
+        var mkdocs_page_input_path = "\u7ebf\u6027\u4ee3\u6570\\chapter_1.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> LiLeyi's Notes
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">主页</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">大学化学</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/chapter_1/">第一章</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">数学分析</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/chapter_1/">第一章</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">线性代数</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">第一章</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#n">n元线性方程</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">定义</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">解</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">解的情况</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">同解</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">LiLeyi's Notes</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">线性代数</li>
+      <li class="breadcrumb-item active">第一章</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="_1">第一节 线性方程组</h1>
+<h2 id="n">n元线性方程</h2>
+<p>定义，未知数，系数...</p>
+<h2 id="_2">定义</h2>
+<p>由m个n元线性方程构成的集合，称为m*n线性方程组。一个方程组可以只有一个方程</p>
+<div class="arithmatex">\[
+\begin{cases}
+a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n=b_1\\
+a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n=b_2\\
+\cdots\\
+a_{m1}x_1+a_{m2}x_2+\cdots+a_{mn}x_n=b_m
+\end{cases}
+\]</div>
+<h2 id="_3">解</h2>
+<p>如果存在n个常数<span class="arithmatex">\(s_1,s_2,\cdots,s_n\)</span>，使得任意<span class="arithmatex">\(x_i=s_i\)</span>，满足所有方程，则称</p>
+<div class="arithmatex">\[
+\begin{cases}
+x_1=s_1\\
+x_2=s_2\\
+\cdots\\
+x_n=s_n
+\end{cases}
+\]</div>
+<p>为方程的一个解</p>
+<h2 id="_4">解的情况</h2>
+<ul>
+<li>有唯一解</li>
+<li>有无穷多解（只要不是唯一，不是无解，就是无穷多解。只要找到两个特解就可以得到全部解，表示为<span class="arithmatex">\(\mathbf{x_1} + k\mathbf{x_2}\)</span>）。若方程组有无穷多解，则表示出的该方程组的所有解的表达式，成为该方程组的通解</li>
+<li>无解</li>
+</ul>
+<h2 id="_5">同解</h2>
+<p>若两个方程组的解相同，即<span class="arithmatex">\(L_1\)</span>的所有解都为<span class="arithmatex">\(L_2\)</span>的解，<span class="arithmatex">\(L_2\)</span>的所有解都为<span class="arithmatex">\(L_1\)</span>的解，则称两个方程组为同解。方程个数可以不一样，但未知数个数要一样</p>
+<h1 id="_6">第二节 线性方程组初等变换</h1>
+<h2 id="_7">作用</h2>
+<p>在不改变方程解的条件下，对方程组进行变换</p>
+<h2 id="_8">分类</h2>
+<ul>
+<li>互换第i和第j个方程的位置</li>
+<li>方程组中第i个方程乘以非零常数h</li>
+<li>将方程组中第i个方程乘上非零常数h加到第j个方程上</li>
+</ul>
+<h2 id="_9">高斯消元法</h2>
+<h3 id="_10">定义</h3>
+<p>用三种初等行变换，将线性方程组化为行阶梯型，解线性方程组的过程</p>
+<h1 id="_11">第三节 矩阵</h1>
+<h2 id="_12">定义</h2>
+<p>用F表示实数集或者复数集，由m×n个数<span class="arithmatex">\(a_ij\)</span>排成的m行n列的数表称为m行n列的矩阵，简称m×n矩阵记为</p>
+<div class="arithmatex">\[
+\mathbf{A} = \begin{bmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
+\end{bmatrix}
+\]</div>
+<p>也可简记<span class="arithmatex">\(\mathbf{A} =(a_{ij})_{m\times n}\)</span>
+矩阵的行向量记为<span class="arithmatex">\(\mathbf{a_i}\)</span><br />
+列向量记为<span class="arithmatex">\(\mathbf{a_j}\)</span>，向量<span class="arithmatex">\(a_i\)</span>的元素为<span class="arithmatex">\(a_{ij}\)</span>，向量<span class="arithmatex">\(a_j\)</span>的元素为<span class="arithmatex">\(a_{ji}\)</span></p>
+<h2 id="_13">一些特殊矩阵</h2>
+<ul>
+<li>系数矩阵 由方程组系数组成的矩阵</li>
+<li>未知数向量 由未知数组成的向量</li>
+<li>常数项组成的列向量 由等号右边的常数组成的向量</li>
+<li>增广矩阵 由系数矩阵和常数项组成的矩阵，常数项列向量在最右边</li>
+</ul>
+<h2 id="_14">矩阵的初等行变换</h2>
+<h3 id="_15">分类</h3>
+<ul>
+<li><span class="arithmatex">\(R_i \leftrightarrow R_j\)</span> 互换第i行和第j行</li>
+<li><span class="arithmatex">\(hR_i\)</span> 第i行乘以非零常数h</li>
+<li><span class="arithmatex">\(kR_i+R_j\)</span> 第i行乘以非零常数k加到第j行上</li>
+</ul>
+<h3 id="_16">性质</h3>
+<ul>
+<li>矩阵初等行变换都是可逆的，且逆变换为同种变换</li>
+</ul>
+<h1 id="_17">第四节 阶梯型矩阵</h1>
+<h2 id="_18">定义</h2>
+<p>如果矩阵<span class="arithmatex">\(\mathbf{T}\)</span>满足下列条件：</p>
+<ul>
+<li><span class="arithmatex">\(\mathbf{T}\)</span>的零行集中在底部，或不存在</li>
+<li>设<span class="arithmatex">\(\mathbf{T}\)</span>有r个非零行，<span class="arithmatex">\(\mathbf{T}\)</span>的第i个非零行的第一个非零元（也叫主元）位于第<span class="arithmatex">\(j_i\)</span>列，则<span class="arithmatex">\(j_1&lt;j_2&lt;\cdots&lt;j_r\)</span></li>
+</ul>
+<p>例如：</p>
+<div class="arithmatex">\[
+\begin{bmatrix}
+0 &amp; 1 &amp; 4 &amp; 2 &amp; 4 \\
+0 &amp; 0 &amp; 1 &amp; 3 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0
+\end{bmatrix}
+\]</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/chapter_1/" class="btn btn-neutral float-left" title="第一章"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/chapter_1/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
