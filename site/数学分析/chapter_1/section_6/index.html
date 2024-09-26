@@ -919,6 +919,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sql/chapter_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mysql
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1144,15 +1165,15 @@
 <h2 id="e">e的定义</h2>
 <p><span class="arithmatex">\(e=\lim_{x \to \infty} (1+\frac 1 x)^x = \lim_{x \to 0} (1+x)^{\frac 1 x}\)</span>，也可以用数列极限定义</p>
 <p>推论：<span class="arithmatex">\(e^x=\lim_{n \to \infty} (1+\frac x n)^n，e=lim_{n \to \infty} (1+\frac 1 {n+m})^n，e=lim_{n \to \infty} (1+\frac 1 n)^{n+m}\)</span></p>
-<p>证明该极限存在：
-$$
-(1+\frac 1 {n+1})^n&lt;(1+\frac 1 n)^n&lt;(1+\frac 1 n)^{n+1}\
-取\epsilon，使得:\
-e-\epsilon&lt;(1+\frac 1 {n+1})^n&lt;(1+\frac 1 n)^n&lt;(1+\frac 1 n)^{n+1}<e+\epsilon\\
-x>0时，取n=[x],则n\leq x \leq n+1,则有\
-\lim_{x \to \infty} (1+\frac 1 {n+1})^n \leq \lim_{x \to \infty} (1+\frac 1 x)^n \leq \lim_{x \to \infty} (1+\frac 1 x)^x \leq \lim_{x \to \infty} (1+\frac 1 n)^x \leq \lim_{x \to \infty} (1+\frac 1 n)^{n+1}\
+<p>证明该极限存在：</p>
+<div class="arithmatex">\[
+(1+\frac 1 {n+1})^n&lt;(1+\frac 1 n)^n&lt;(1+\frac 1 n)^{n+1}\\
+取\epsilon，使得:\\
+e-\epsilon&lt;(1+\frac 1 {n+1})^n&lt;(1+\frac 1 n)^n&lt;(1+\frac 1 n)^{n+1}&lt;e+\epsilon\\
+x&gt;0时，取n=[x],则n\leq x \leq n+1,则有\\
+\lim_{x \to \infty} (1+\frac 1 {n+1})^n \leq \lim_{x \to \infty} (1+\frac 1 x)^n \leq \lim_{x \to \infty} (1+\frac 1 x)^x \leq \lim_{x \to \infty} (1+\frac 1 n)^x \leq \lim_{x \to \infty} (1+\frac 1 n)^{n+1}\\
 由迫敛性得极限存在
-$$</p>
+\]</div>
 <h2 id="_2">渐近线</h2>
 <h2 id="_3">定义</h2>
 <p>当曲线上一点M沿曲线无限远离原点或无限接近间断点时，如果M到一条直线的距离无限趋近于零，那么这条直线称为这条曲线的渐近线</p>
