@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../basic_concepts/">
+      
+      
+        <link rel="next" href="../optimize/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>基本概念与介绍 - LiLeyi's Notes</title>
+        <title>数学基础 - LiLeyi's Notes</title>
       
     
     
@@ -104,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              基本概念与介绍
+              数学基础
             
           </span>
         </div>
@@ -1321,7 +1325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.md" class="md-nav__link">
+      <a href="../../sql/index.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1342,7 +1346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sign_in.md" class="md-nav__link">
+      <a href="../../sql/sign_in.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1367,17 +1371,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
@@ -1391,7 +1397,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             机器学习
@@ -1405,7 +1411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/basic_concepts/" class="md-nav__link">
+      <a href="../basic_concepts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1423,10 +1429,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/math_basic/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    数学基础
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1435,6 +1461,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      范数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kan" class="md-nav__link">
+    <span class="md-ellipsis">
+      KAN（了解）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      梯度
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      多元函数泰勒展开
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1447,7 +1529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/optimize/" class="md-nav__link">
+      <a href="../optimize/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1581,7 +1663,16 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      数据
+      范数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kan" class="md-nav__link">
+    <span class="md-ellipsis">
+      KAN（了解）
     </span>
   </a>
   
@@ -1590,7 +1681,7 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      数据管理技术
+      梯度
     </span>
   </a>
   
@@ -1599,162 +1690,9 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      数据库
+      多元函数泰勒展开
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dbms" class="md-nav__link">
-    <span class="md-ellipsis">
-      数据库管理系统（DBMS）
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      数据库应用程序
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      其他
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      数据模型
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      关系数据库的产生
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      关系模式
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="关系模式">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      表
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="表">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      组成
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      主键
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    <span class="md-ellipsis">
-      外键
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    <span class="md-ellipsis">
-      概念结构设计
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="概念结构设计">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    <span class="md-ellipsis">
-      定义
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#e-r" class="md-nav__link">
-    <span class="md-ellipsis">
-      E-R图
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    <span class="md-ellipsis">
-      设计策略
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
-    <span class="md-ellipsis">
-      冲突
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1773,113 +1711,39 @@
                   
 
 
-<h1 id="_1">基本概念与介绍</h1>
-<h2 id="_2">数据</h2>
-<ul>
-<li>对客观事物的符号表示</li>
-<li>是数据库中存储的基本对象</li>
-<li>数据具有一定的格式（语法）和含义（语义）</li>
-<li>与其语义密不可分</li>
-</ul>
-<h2 id="_3">数据管理技术</h2>
-<ol>
-<li>人工管理阶段，20世纪五十年代之前</li>
-<li>文件系统阶段，20世纪五十年代后期到20世纪六十年代</li>
-<li>数据库系统阶段，20世纪六十年代后期以来</li>
-</ol>
-<h2 id="_4">数据库</h2>
-<p>提供存储空间，存储数据的容器，可包含多个文件。特征：</p>
-<ul>
-<li>按一定数据模型组织，描述和储存</li>
-<li>数据共享</li>
-<li>减少冗余</li>
-<li>数据独立性高</li>
-<li>统一的数据控制功能</li>
-</ul>
-<h2 id="dbms">数据库管理系统（DBMS）</h2>
-<ul>
-<li>数据定义（DDL）</li>
-<li>数据操纵（DML）</li>
-<li>数据控制（DCL）</li>
-<li>数据库的运行管理</li>
-</ul>
-<h2 id="_5">数据库应用程序</h2>
-<ul>
-<li>满足对数据管理的更高要求</li>
-<li>使数据管理更直观友好</li>
-<li>负责与DBMS通信</li>
-</ul>
-<h2 id="_6">其他</h2>
-<ul>
-<li>数据库系统（DBS）</li>
-<li>ODBC（Open Database Connectivity）</li>
-<li>JDBC（Java Database Connectivity）</li>
-<li>ADO.NET（ActiveX Data Objects.NET）</li>
-<li>PDO（PHP Data Object）</li>
-<li>node</li>
-</ul>
-<h2 id="_7">数据模型</h2>
-<ul>
-<li>层次模型（例如学校，学院，系的关系）</li>
-<li>网状模型（每个数据用一个节点表示，每个节点与其它节点都联系）</li>
-<li>关系模型（指表内部的关系，主流）</li>
-</ul>
-<h2 id="_8">关系数据库的产生</h2>
-<ol>
-<li>1970 理论提出</li>
-<li>1985 12条规则</li>
-<li>1990 330条规则</li>
-</ol>
-<h2 id="_9">关系模式</h2>
-<h3 id="_10">表</h3>
-<p>某种特定类型数据的结构化清单，做到一个清单一个表，越类聚越好，可节省空间
-分类</p>
-<ul>
-<li>实体表 真正的表格</li>
-<li>关系表 让两个表建立关系的表</li>
-</ul>
-<h4 id="_11">组成</h4>
-<ul>
-<li>行</li>
-<li>列</li>
-</ul>
-<h4 id="_12">主键</h4>
-<ul>
-<li>不一定只有一列，只要能用于确定一行的，都可以是主键</li>
-<li>唯一标识一行</li>
-<li>每个表最好都定义主键</li>
-<li>定义条件：非空，唯一</li>
-<li>一般不更新</li>
-</ul>
-<h4 id="_13">外键</h4>
-<ul>
-<li>包含另一个表的主键值</li>
-<li>定义了两个表的关系</li>
-</ul>
-<h2 id="_14">概念结构设计</h2>
-<h3 id="_15">定义</h3>
-<p>从分析用户的数据对象及数据对象之间的联系出发，到获取E-R图的过程</p>
-<h3 id="e-r">E-R图</h3>
-<ul>
-<li>实体：每一类对象的集合</li>
-<li>属性：每一个实体集涉及的信息项</li>
-<li>联系</li>
-<li>一对一：A中一个实体最多与B中一个实体相联系</li>
-<li>一对多：A中一个实体可与B中多个实体相联系，通常将“一”的主键放到“多”中</li>
-<li>多对多：...。必须建立关系表</li>
-</ul>
-<h3 id="_16">设计策略</h3>
-<ul>
-<li>自底向上</li>
-<li>自顶向下</li>
-<li>混合设计</li>
-</ul>
-<h3 id="_17">冲突</h3>
-<ul>
-<li>属性冲突</li>
-<li>命名冲突</li>
-<li>结构冲突</li>
-</ul>
+<h1 id="_1">数学基础</h1>
+<h2 id="_2">范数</h2>
+<p>一个向量n个元素，范数由<span class="arithmatex">\(||x||_p = (\Sigma |x_i| ^ p)^{\frac 1 p}\)</span>.。p趋近于0时为坐标轴，p趋近于无穷时为正方形<span class="arithmatex">\([-1,1] \times [-1,1]\)</span></p>
+<h2 id="kan">KAN（了解）</h2>
+<p><span class="arithmatex">\(f(z)=\Sigma_q \Phi_q [\Sigma_{q,p} \phi_{p,q} (x_i)]\)</span></p>
+<p><span class="arithmatex">\(f(x_j)=\Sigma c_i B_i(x_j)\)</span></p>
+<p>用简单单变量函数（样条函数）复合形成多变量函数，通过调整样条函数的参数来拟合结果</p>
+<h2 id="_3">梯度</h2>
+<p><span class="arithmatex">\(\nabla f(\vec x)=(\frac {\partial f} {x_1},\frac {\partial f} {x_2},...,\frac {\partial f} {\partial x_n})^T\)</span>，指向增长最快的方向</p>
+<h2 id="_4">多元函数泰勒展开</h2>
+<p>...</p>
+<p>利用泰勒展开迭代求最小值</p>
+<p><span class="arithmatex">\(f(x)\approx f(x_0)+f'(x_0)(x-x_0)+f''(x_0)(x-x_0)^2/2\)</span></p>
+<p>对二阶展开式求导，求极小值得极小值点：</p>
+<p><span class="arithmatex">\(x=x_0-f'(x_0)/f''(x_0)\)</span></p>
+<p>然后持续迭代，得到原函数极小值点的数值解。</p>
+<p>推广到多维：</p>
+<p><span class="arithmatex">\(f(\mathbf x)=f(\mathbf x_0)+\nabla^T f(\mathbf x_0)(\mathbf x -\mathbf x_0)+\frac1 2 (\mathbf x - \mathbf x_0)^T \frac {\partial^2 f(\mathbf x_0)} {\partial x^2}(\mathbf x - \mathbf x_0)+o\)</span></p>
+<p>求偏导，令其等于0：</p>
+<p><span class="arithmatex">\(\nabla f(\mathbf x_0)+\frac {\partial^2 f(\mathbf x_0)} {\partial x^2}(\mathbf x - \mathbf x_0)=0\)</span></p>
+<p><span class="arithmatex">\(\mathbf{x}=\mathbf{x_0}- [\frac {\partial ^2f(\mathbf x_0)} {\partial x^2}]^{-1} \nabla f(\mathbf{x_0})\)</span></p>
+<p>其中:</p>
+<p>$$
+\frac {\partial f(\mathbf x)} {\partial x} = [\frac {\partial f} {\partial x_1},\frac {\partial f} {\partial x_2},...]^T\</p>
+<p>\frac {\partial ^2f(\mathbf x)} {\partial \mathbf x^2} = \begin{bmatrix}
+\frac {\partial ^2f(\mathbf x)} {\partial x_1^2} &amp; \frac {\partial ^2f(\mathbf x)} {\partial x_1\partial x_2} &amp; ... &amp; \frac {\partial ^2f(\mathbf x)} {\partial x_1\partial x_n} \
+\frac {\partial ^2f(\mathbf x)} {\partial x_2\partial x_1} &amp; \frac {\partial ^2f(\mathbf x)} {\partial x_2^2} &amp; ... &amp; \frac {\partial ^2f(\mathbf x)} {\partial x_2\partial x_n} \
+... &amp; ... &amp; ... &amp; ... \
+\frac {\partial ^2f(\mathbf x)} {\partial x_n\partial x_1} &amp; \frac {\partial ^2f(\mathbf x)} {\partial x_n\partial x_2} &amp; ... &amp; \frac {\partial ^2f(\mathbf x)} {\partial x_n^2}
+\end{bmatrix}
+$$</p>
+<p>若二阶导数为0，则使用其他方法，例如梯度下降法</p>
+<p>直接将<span class="arithmatex">\(\mathbf{x}=\mathbf{x_0}- [\frac {\partial ^2f(\mathbf x_0)} {\partial x^2}]^{-1} \nabla f(\mathbf{x_0})\)</span>换为<span class="arithmatex">\(\mathbf{x}=\mathbf{x_0}-  \nabla^T f(\mathbf{x_0})\alpha \nabla f(\mathbf{x_0})\)</span>，<span class="arithmatex">\(\alpha\)</span>称为学习率</p>
 
 
 
