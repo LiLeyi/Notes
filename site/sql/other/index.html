@@ -3306,6 +3306,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="索引">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      优缺点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      删除
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      索引设计
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      触发器
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -3411,6 +3462,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="索引">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      优缺点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      删除
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      索引设计
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      触发器
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -3455,25 +3557,70 @@
 <h2 id="_5">数据库、表、行字符集的设置</h2>
 <p>create table 表名(表定义) character set utf8mb4;</p>
 <h2 id="_6">索引</h2>
+<h3 id="_7">优缺点</h3>
+<p>优点：</p>
 <ul>
 <li>查询快</li>
 <li>强制数据唯一</li>
 <li>加速排序</li>
 <li>优化连接</li>
 <li>支持分组</li>
-<li>
-<p>提高查询效率</p>
-</li>
-<li>
-<p>占空间</p>
-</li>
+<li>提高查询效率</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>占空间</li>
 <li>设计耗时间</li>
 </ul>
-<p>创建</p>
+<h3 id="_8">创建</h3>
 <ul>
 <li>create [类型] index 索引名 [btree|rtree] on 表名(列名[(length)]) [asc|desc];</li>
 </ul>
 <p>创建表后，只要有主键，就会创建索引</p>
+<h3 id="_9">删除</h3>
+<ul>
+<li>drop index 索引名 on 表名;</li>
+</ul>
+<h3 id="_10">索引设计</h3>
+<ul>
+<li>不要过度索引</li>
+<li>使用唯一索引</li>
+<li>使用短索引</li>
+<li>利用最左前缀</li>
+<li>将频繁进行排序和分组的列建立索引</li>
+<li>出现在where子句或连接子句中的列</li>
+<li>InnoDB表尽量自己指定主键，主键选择较短数据类型</li>
+<li>不同值少的不建立索引，例如enum</li>
+<li>经常修改的表尽量少建立索引，维护不易</li>
+</ul>
+<h2 id="_11">触发器</h2>
+<p>建立在表上，运行在整个数据库</p>
+<div class="highlight"><pre><span></span><code><span class="k">delimiter</span><span class="w"> </span><span class="n">delimiterName</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="err">修改语句结束的符号</span>
+<span class="k">create</span><span class="w"> </span><span class="k">trigger</span><span class="w"> </span><span class="p">[</span><span class="k">definer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">user</span><span class="o">|</span><span class="k">CURRENT_USER</span><span class="p">]</span>
+<span class="err">触发器名</span><span class="w"> </span><span class="err">触发时间</span><span class="w"> </span><span class="err">触发事件</span>
+<span class="k">on</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="k">each</span><span class="w"> </span><span class="k">row</span>
+<span class="p">[</span><span class="err">触发顺序</span><span class="p">]</span>
+<span class="err">触发体</span>
+<span class="n">delimiterName</span>
+<span class="k">Delimiter</span>
+</code></pre></div>
+<ul>
+<li>触发时间：before,after</li>
+<li>触发事件：insert,update,delete</li>
+<li>触发顺序：first,last</li>
+<li>触发体：begin 语句 end</li>
+</ul>
+<p>例如：</p>
+<div class="highlight"><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="err">$$</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">after_employee_insert</span>
+<span class="k">AFTER</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">employees</span>
+<span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
+<span class="k">BEGIN</span>
+<span class="w">    </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">employee_log</span><span class="w"> </span><span class="p">(</span><span class="n">employee_id</span><span class="p">,</span><span class="w"> </span><span class="n">log_message</span><span class="p">)</span>
+<span class="w">    </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="k">NEW</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="s1">&#39;Inserted new employee: &#39;</span><span class="p">,</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;, Position: &#39;</span><span class="p">,</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="k">position</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;, Salary: &#39;</span><span class="p">,</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">salary</span><span class="p">));</span>
+<span class="k">END</span><span class="err">$$</span>
+<span class="k">DELIMITER</span><span class="p">;</span>
+</code></pre></div>
 
 
 
