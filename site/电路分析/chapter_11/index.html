@@ -1808,6 +1808,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      理想变压器阻抗变换
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5048,6 +5057,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      理想变压器阻抗变换
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5122,6 +5140,19 @@ u_2 = L_2 \frac {di_2} {dt} + M \frac{di_1}{dt}
 </ul>
 <h2 id="vcr_1">理想变压器VCR</h2>
 <p>初级匝数<span class="arithmatex">\(N_1\)</span>，次级匝数<span class="arithmatex">\(N_2\)</span>，则参数匝比（变比）<span class="arithmatex">\(n = \frac {N_2} {N_1} = \sqrt {\frac {L_2} {L_1}}\)</span></p>
+<p>当自感、互感均趋于无穷大且全耦合无损耗情况下，<span class="arithmatex">\(u_2 = n u_1\)</span></p>
+<p><span class="arithmatex">\(\dot I_1 = \frac {\dot U_1} {j \omega L_1} - \sqrt{\frac {L_2}{L_1}} \dot I_2\)</span>，使<span class="arithmatex">\(\frac {\dot U_1} {j \omega L_1}\)</span>趋于0，即<span class="arithmatex">\(L_1,L_2\)</span>均趋于无穷</p>
+<ul>
+<li>两电压高电位与同名端一致时，<span class="arithmatex">\(u_2 = n u_1\)</span>，否则有负号</li>
+<li>两电流从同名端流入时，<span class="arithmatex">\(i_2 = -\frac 1 n i_1\)</span>，否则无负号</li>
+</ul>
+<p>能量：<span class="arithmatex">\(p = u_2 i _2 + u_1 i_1 = nu_1 (-\frac 1 n i_1) + u_1 i_1 = 0\)</span></p>
+<p>理想变压器是无记忆元件，是一种双口电阻元件</p>
+<h2 id="_12">理想变压器阻抗变换</h2>
+<p><span class="arithmatex">\(Z_i = \frac {\dot U_1} {\dot I_1} = \frac 1 {n^2}Z_L\)</span></p>
+<p>即二次电阻对一次侧的折合阻抗。</p>
+<p>理想变压器具有变换阻抗的性质，可实现最大功率匹配</p>
+<p>折合阻抗是输入阻抗</p>
 
 
 
