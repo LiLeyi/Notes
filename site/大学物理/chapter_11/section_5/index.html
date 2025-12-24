@@ -1,0 +1,7661 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>波函数与薛定谔方程 - LiLeyi's Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="LiLeyi&#39;s Notes" class="md-header__button md-logo" aria-label="LiLeyi's Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LiLeyi's Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              波函数与薛定谔方程
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="LiLeyi&#39;s Notes" class="md-nav__button md-logo" aria-label="LiLeyi's Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    LiLeyi's Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    主页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    签到方式
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            签到方式
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sign_in/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    抽象代数
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            抽象代数
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/chapter_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/chapter_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/chapter_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/chapter_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    大数据导论
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            大数据导论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第二章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            第二章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/chapter_2/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第三章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            第三章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/chapter_3/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第四章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            第四章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/chapter_4/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/chapter_4/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第五章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            第五章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/chapter_5/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/chapter_5/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/chapter_5/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/chapter_5/section_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第六章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            第六章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/chapter_6/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第七章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            第七章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/chapter_7/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/chapter_7/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/chapter_7/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/chapter_7/section_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/chapter_7/section_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第五节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/chapter_7/section_6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第六节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    大学化学
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            大学化学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第一章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            第一章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/chapter_1/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/chapter_1/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/chapter_1/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/chapter_1/section_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/chapter_1/section_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第五节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第二章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            第二章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/chapter_2/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/chapter_2/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/chapter_2/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第三章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            第三章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/chapter_3/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第四章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            第四章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/chapter_4/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/chapter_4/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/chapter_4/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    大学物理
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            大学物理
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../experiment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    实验
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第一章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            第一章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_1/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_1/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_1/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_1/section_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_1/section_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第五节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第二章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            第二章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_2/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_2/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_2/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_2/section_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第五节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第三章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            第三章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_3/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_3/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_3/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_3/section_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_3/section_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第五节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_3/section_6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第六节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_3/section_7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第七节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第四章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            第四章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_4/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_4/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_7" id="__nav_6_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第五章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            第五章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_5/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_5/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_5/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第六章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            第六章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_6/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_6/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第七章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            第七章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_7/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_7/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_7/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第八章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
+            <span class="md-nav__icon md-icon"></span>
+            第八章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_8/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_8/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第九章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_11">
+            <span class="md-nav__icon md-icon"></span>
+            第九章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_9/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_9/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_9/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_12" id="__nav_6_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第十章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_12">
+            <span class="md-nav__icon md-icon"></span>
+            第十章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_10/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    电路分析
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            电路分析
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90/chapter_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90/chapter_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90/chapter_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90/chapter_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90/chapter_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第五章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90/chapter_6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第六章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90/chapter_7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第七章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90/chapter_8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第八章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90/chapter_9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第九章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90/chapter_10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第十章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90/chapter_11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第十一章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    动力系统：从分形到混沌
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            动力系统：从分形到混沌
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8A%A8%E5%8A%9B%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%BB%8E%E5%88%86%E5%BD%A2%E5%88%B0%E6%B7%B7%E6%B2%8C/chapter_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8A%A8%E5%8A%9B%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%BB%8E%E5%88%86%E5%BD%A2%E5%88%B0%E6%B7%B7%E6%B2%8C/chapter_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8A%A8%E5%8A%9B%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%BB%8E%E5%88%86%E5%BD%A2%E5%88%B0%E6%B7%B7%E6%B2%8C/chapter_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8A%A8%E5%8A%9B%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%BB%8E%E5%88%86%E5%BD%A2%E5%88%B0%E6%B7%B7%E6%B2%8C/chapter_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8A%A8%E5%8A%9B%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%BB%8E%E5%88%86%E5%BD%A2%E5%88%B0%E6%B7%B7%E6%B2%8C/chapter_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第五章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8A%A8%E5%8A%9B%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%BB%8E%E5%88%86%E5%BD%A2%E5%88%B0%E6%B7%B7%E6%B2%8C/chapter_6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第六章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8A%A8%E5%8A%9B%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%BB%8E%E5%88%86%E5%BD%A2%E5%88%B0%E6%B7%B7%E6%B2%8C/chapter_7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第七章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8A%A8%E5%8A%9B%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%BB%8E%E5%88%86%E5%BD%A2%E5%88%B0%E6%B7%B7%E6%B2%8C/chapter_8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第八章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8A%A8%E5%8A%9B%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%BB%8E%E5%88%86%E5%BD%A2%E5%88%B0%E6%B7%B7%E6%B2%8C/chapter_9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第九章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8A%A8%E5%8A%9B%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%BB%8E%E5%88%86%E5%BD%A2%E5%88%B0%E6%B7%B7%E6%B2%8C/chapter_10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第十章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    概率论
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            概率论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%A6%82%E7%8E%87%E8%AE%BA/chapter_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%A6%82%E7%8E%87%E8%AE%BA/chapter_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%A6%82%E7%8E%87%E8%AE%BA/chapter_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%A6%82%E7%8E%87%E8%AE%BA/chapter_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%A6%82%E7%8E%87%E8%AE%BA/chapter_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第五章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%A6%82%E7%8E%87%E8%AE%BA/chapter_6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第六章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    机器学习
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            机器学习
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/basic_concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基本概念
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/math_basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数学基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/optimize/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    优化问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/function/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    凸函数
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/svm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    支持向量机
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/cluster/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    聚类
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/nn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    神经网络
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    集合论
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            集合论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%9B%86%E5%90%88%E8%AE%BA/chapter_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%9B%86%E5%90%88%E8%AE%BA/chapter_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%9B%86%E5%90%88%E8%AE%BA/chapter_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%9B%86%E5%90%88%E8%AE%BA/chapter_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机通识
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            计算机通识
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%80%9A%E8%AF%86/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    硬件基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%80%9A%E8%AF%86/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    软件基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%80%9A%E8%AF%86/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    网络
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%80%9A%E8%AF%86/section_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    人工智能与算法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    金融学概论
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            金融学概论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%87%91%E8%9E%8D%E5%AD%A6%E6%A6%82%E8%AE%BA/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%87%91%E8%9E%8D%E5%AD%A6%E6%A6%82%E8%AE%BA/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%87%91%E8%9E%8D%E5%AD%A6%E6%A6%82%E8%AE%BA/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%87%91%E8%9E%8D%E5%AD%A6%E6%A6%82%E8%AE%BA/section_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%87%91%E8%9E%8D%E5%AD%A6%E6%A6%82%E8%AE%BA/section_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第五节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数据结构
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            数据结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/chapter_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/chapter_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/chapter_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/chapter_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数理逻辑
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            数理逻辑
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/chapter_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/chapter_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/chapter_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/chapter_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/chapter_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第五章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/chapter_6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第六章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/chapter_7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第七章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/chapter_8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第八章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数理统计
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            数理统计
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/chapter_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/chapter_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/chapter_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/chapter_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/chapter_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第五章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数学分析
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            数学分析
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_17_1" id="__nav_17_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第一章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17_1">
+            <span class="md-nav__icon md-icon"></span>
+            第一章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/chapter_1/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/chapter_1/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/chapter_1/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/chapter_1/section_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/chapter_1/section_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第五节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/chapter_1/section_6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第六节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/chapter_1/section_7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第七节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_17_2" id="__nav_17_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第二章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17_2">
+            <span class="md-nav__icon md-icon"></span>
+            第二章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/chapter_2/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/chapter_2/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/chapter_2/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/chapter_2/section_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/chapter_2/section_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第五节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_17_3" id="__nav_17_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第三章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17_3">
+            <span class="md-nav__icon md-icon"></span>
+            第三章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/chapter_3/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数值分析
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            数值分析
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_18_1" id="__nav_18_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第一章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_18_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18_1">
+            <span class="md-nav__icon md-icon"></span>
+            第一章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chapter_1/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chapter_1/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_18_2" id="__nav_18_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第二章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_18_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18_2">
+            <span class="md-nav__icon md-icon"></span>
+            第二章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chapter_2/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chapter_2/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chapter_2/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_18_3" id="__nav_18_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第三章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_18_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18_3">
+            <span class="md-nav__icon md-icon"></span>
+            第三章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chapter_3/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_18_4" id="__nav_18_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第四章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_18_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18_4">
+            <span class="md-nav__icon md-icon"></span>
+            第四章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chapter_4/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chapter_4/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_18_5" id="__nav_18_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第五章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_18_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18_5">
+            <span class="md-nav__icon md-icon"></span>
+            第五章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chapter_5/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chapter_5/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chapter_5/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chapter_5/section_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chapter_5/section_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第五节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chapter_5/section_6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第六节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_18_6" id="__nav_18_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第六章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_18_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18_6">
+            <span class="md-nav__icon md-icon"></span>
+            第六章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chapter_6/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    图论
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19">
+            <span class="md-nav__icon md-icon"></span>
+            图论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%9B%BE%E8%AE%BA/chapter_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%9B%BE%E8%AE%BA/chapter_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%9B%BE%E8%AE%BA/chapter_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%9B%BE%E8%AE%BA/chapter_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%9B%BE%E8%AE%BA/chapter_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第五章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%9B%BE%E8%AE%BA/chapter_6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第六章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    线性代数
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20">
+            <span class="md-nav__icon md-icon"></span>
+            线性代数
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_20_1" id="__nav_20_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第一章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_20_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20_1">
+            <span class="md-nav__icon md-icon"></span>
+            第一章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/chapter_1/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/chapter_1/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/chapter_1/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_20_2" id="__nav_20_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第二章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_20_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20_2">
+            <span class="md-nav__icon md-icon"></span>
+            第二章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/chapter_2/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_20_3" id="__nav_20_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第三章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_20_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20_3">
+            <span class="md-nav__icon md-icon"></span>
+            第三章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/chapter_3/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_20_4" id="__nav_20_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第四章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_20_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20_4">
+            <span class="md-nav__icon md-icon"></span>
+            第四章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/chapter_4/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    知识产权法
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21">
+            <span class="md-nav__icon md-icon"></span>
+            知识产权法
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/introduce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_2" id="__nav_21_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第一章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_2">
+            <span class="md-nav__icon md-icon"></span>
+            第一章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_1/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_1/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_1/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_1/section_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_1/section_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第五节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_1/section_6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第六节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_1/section_7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第七节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_1/section_8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第八节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_3" id="__nav_21_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第二章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_3">
+            <span class="md-nav__icon md-icon"></span>
+            第二章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_2/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_2/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_2/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_2/section_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_2/section_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第五节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_2/section_6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第六节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_2/section_7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第七节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_4" id="__nav_21_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第三章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_4">
+            <span class="md-nav__icon md-icon"></span>
+            第三章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_3/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_3/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_3/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_3/section_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_5" id="__nav_21_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第四章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_5">
+            <span class="md-nav__icon md-icon"></span>
+            第四章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_4/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_4/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_4/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_6" id="__nav_21_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第五章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_6">
+            <span class="md-nav__icon md-icon"></span>
+            第五章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_5/section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_5/section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_5/section_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第三节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95/chapter_5/section_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22" >
+        
+          
+          <label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blender
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_22">
+            <span class="md-nav__icon md-icon"></span>
+            Blender
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Blender/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基本操作
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_23" id="__nav_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Matlab
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_23">
+            <span class="md-nav__icon md-icon"></span>
+            Matlab
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../matlab/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../matlab/matrix_and_vector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    向量和矩阵
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../matlab/logic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基本语法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../matlab/function/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    函数
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../matlab/plot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    绘图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_24" >
+        
+          
+          <label class="md-nav__link" for="__nav_24" id="__nav_24_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sql
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_24">
+            <span class="md-nav__icon md-icon"></span>
+            Sql
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sql/chapter_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基本概念与介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sql/chapter_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mysql
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sql/chapter_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sql语言
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sql/ddl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DDL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sql/dml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sql/dcl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DCL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sql/figure_type/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据类型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sql/operator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    运算符
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sql/other/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    其他
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      波函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      自由粒子波函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      薛定谔方程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="薛定谔方程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      建立
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      自由粒子薛定谔方程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      一般情况下薛定谔方程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      分离变量求解
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      一维无限深方势阱
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一维无限深方势阱">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      阱内求解其定态薛定谔方程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      结论
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      一维有限势阱
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一维有限势阱">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      一侧无限宽
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      结论
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      隧道效应应用
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">波函数与薛定谔方程</h1>
+<h2 id="_2">波函数</h2>
+<p>物质波写为<span class="arithmatex">\(\Psi(\vec r,t)\)</span></p>
+<p>玻恩假设：物质波不代表物理量的波动，而是刻画粒子在空间概率分布的概率波</p>
+<p>光子在某处出现的概率与光在该处振幅的平方成正比</p>
+<p>概率密度为概率幅模的平方<span class="arithmatex">\(|\Psi(\vec r, t)|^2 = \bar\Psi(\vec r, t)\Psi(\vec r, t)\)</span>。代表t时刻，在<span class="arithmatex">\(\vec r\)</span>末端单位体积内发现粒子的概率</p>
+<p>波函数乘常数仍然为描述同一个波的波函数，因为一般考虑相对概率</p>
+<p>双缝干涉：</p>
+<div class="arithmatex">\[|\Psi(\vec r, t)|^2 = |\Psi_A + \Psi_B|^2 \\= |\Psi_A|^2 + |\Psi_B^2| + \bar \Psi_A \Psi_B + \bar \Psi_B \Psi_A\]</div>
+<p>后两项为干涉项</p>
+<p>微观粒子的波动性本质是概率幅的叠加性</p>
+<h2 id="_3">自由粒子波函数</h2>
+<p>沿x轴正方形经典平面波波函数<span class="arithmatex">\(y(x,t) = Acos(\omega t - kx)\)</span>，复数形式为<span class="arithmatex">\(\bar y (x,t) = A e^{-i(\omega t - kx)}\)</span>，但真正有物理意义的仍然只是实部（或虚部）</p>
+<p>自由粒子动量沿x轴正方形运动，波函数可以写为类似经典波的复数形式。把其中波动性参量换为粒子性的参量<span class="arithmatex">\(E,p_x\)</span>来表示即可。</p>
+<div class="arithmatex">\[\omega = 2\pi \nu = E/\hbar, k = \frac {2\pi} \lambda = p_x/\hbar\]</div>
+<p>则有</p>
+<div class="arithmatex">\[\psi(x,t) = A e^{\frac i \hbar (p_x x - Et)}\]</div>
+<p>A为归一化常量，求绝对概率分布时，需要归一化。非相对论情况下<span class="arithmatex">\(E =\frac {p_x^2} {2m}\)</span>。自由粒子不受外力场，动能就是总能量。物质波波函数不能直接测量，可测量的是其模的平方，即出现概率。若自由粒子波函数用实函数描述，会违背波恩统计诠释（因为平方后含E，导致概率与能量零点选取有关，不合理。且平方后为周期函数，不在空间与时间均匀分布）</p>
+<p>波函数标准条件：由通解找特解</p>
+<ul>
+<li>波函数有限性：由统计解释，在空间任何有限体积元中找到粒子的概率必须为有限值</li>
+<li>波函数的归一性：空间各点的概率总和为1。<span class="arithmatex">\(\int_\omega |\psi|^2 dV = 1\)</span></li>
+<li>波函数的单值性：根据统计解释，要求波函数单值，从而保证概率密度在任意时刻都是确定的</li>
+<li>波函数的连续型：在势场性质和边界条件下，要求波函数及其一阶导数是连续的</li>
+</ul>
+<p>状态叠加原理：如果<span class="arithmatex">\(\psi_1.\psi_2,\dots\)</span>等都是体系的可能状态（基矢，那么他们的线性叠加态也是这个体系的一个可能状态：</p>
+<div class="arithmatex">\[\psi = C_1 \psi_1 + C_2 \psi_2+\dots\]</div>
+<p>其中系数为复常数，模平方为在对应态粒子出现的概率。包含动态意义与静态意义，即随着时间变化，仍然满足该关系。</p>
+<p>微观粒子波函数的叠加是概率幅的叠加而不是概率的叠加（概率叠加不会存在干涉项）</p>
+<h2 id="_4">薛定谔方程</h2>
+<h3 id="_5">建立</h3>
+<p>经典力学中，物体运动满足牛顿定律，给出了物体运动状态随时间的变化规律。量子力学中，微观粒子的运动规律用薛定谔方程，即<span class="arithmatex">\(\psi\)</span>随时间与空间的变化规律</p>
+<p>为非相对论微观粒子的基本方程</p>
+<p>为假设（非理论推导）。建立在：</p>
+<ul>
+<li>粒子运动状态用波函数描述。该方程是关于粒子运动状态变化的方程，必须含有对波函数对时间的导数，且为一阶</li>
+<li>薛定谔方程应该是线性其次方程，因为要满足态叠加原理</li>
+<li>是低速下例子运动方程，低速非相对论近似下，动能与动量关系为<span class="arithmatex">\(E = \frac {p^2} {2m}\)</span></li>
+<li>系数不包含能量、动量等状态参量，具有普遍性</li>
+</ul>
+<h3 id="_6">自由粒子薛定谔方程</h3>
+<p>设波函数为<span class="arithmatex">\(\psi(x,t) = Ae ^ {- \frac i \hbar (Et - px)}\)</span></p>
+<p>对x二阶偏导<span class="arithmatex">\(\frac {\partial \psi} {\partial x^2} = - \frac {p^2} {\hbar^2}\psi\)</span></p>
+<p>对t一阶偏导<span class="arithmatex">\(\frac {\partial\psi} {\partial t} = - \frac i \hbar E\psi\)</span></p>
+<p>由(2)得<span class="arithmatex">\(\psi = - \frac {\partial \psi} {\partial t} \frac \hbar {iE}\)</span>，带入(1)<span class="arithmatex">\(\frac {\partial \psi} {\partial x^2} = \frac {p^2} {iE\hbar} \frac {\partial \psi} {\partial t}\)</span>。由E与p关系，带入得<span class="arithmatex">\(- \frac {\hbar} {2m} \frac {\partial \psi} {\partial x^2} = i\hbar \frac {\partial \psi} {\partial t}\)</span></p>
+<p>替换关系</p>
+<div class="arithmatex">\[E\leftrightarrow i\hbar \frac \partial {\partial t}\]</div>
+<div class="arithmatex">\[p_x \leftrightarrow -i\hbar \frac \partial {\partial x}\]</div>
+<div class="arithmatex">\[-\hbar ^2 \frac {\partial^2} {\partial x^2}\]</div>
+<p>将算法带入粒子能量<span class="arithmatex">\(E=\frac {p_x^2} {2m}\)</span>得自由粒子薛定谔方程</p>
+<h3 id="_7">一般情况下薛定谔方程</h3>
+<p><span class="arithmatex">\(E = \frac{p_x^2} {2m} + U(x,t)\)</span></p>
+<p>带入即有<span class="arithmatex">\(- \frac {\hbar} {2m} \frac {\partial \psi} {\partial x^2} + U(x,t)\psi= i\hbar \frac {\partial \psi} {\partial t}\)</span>，称为含时薛定谔方程</p>
+<p>三维中：</p>
+<div class="arithmatex">\[-\frac {\hbar^2}{2m} \nabla^2 \psi + U\psi = i\hbar \frac {\partial \psi} {\partial t}\]</div>
+<p>引入哈密顿算子<span class="arithmatex">\(\hat H = - \frac {\hbar^2}{2m}\nabla^2 + U\)</span></p>
+<div class="arithmatex">\[\hat H \psi = i\hbar \frac {\partial \psi}{\partial t}\]</div>
+<h3 id="_8">分离变量求解</h3>
+<p>当可以把波函数中的位置和时间分离出来时，就可以分离变量求解。例如U中不与时间有关时可分离变量。</p>
+<div class="arithmatex">\[\psi(\vec r,t) = \Phi(\vec r)T(t)\]</div>
+<p>带入得</p>
+<div class="arithmatex">\[i\hbar \frac {dT(t)} {dt}\Phi(\vec r) = [\hat H \Phi(\vec r)]T(t)\]</div>
+<p>同除波函数</p>
+<div class="arithmatex">\[i\hbar \frac {dT(t)} {dt} \frac 1 {T(t)} = \frac 1 {\Phi(\vec r)}\hat H\Phi(\vec r)\]</div>
+<p>量变必须等于一个常量，设为E，得到两个方程</p>
+<div class="arithmatex">\[i\hbar \frac {dT(t)} {dt} = ET(t)\]</div>
+<div class="arithmatex">\[\hat H \Phi(\vec r) = E\Phi(\vec r)\]</div>
+<p>第一个是一阶常系数微分方程，解为<span class="arithmatex">\(T(t) = Ce^{-\frac i \hbar Et}\)</span>，称为振动因子，</p>
+<ul>
+<li>因为指数项无量纲，所以E的量纲与能量一致。</li>
+<li>C可以为复数。</li>
+<li>该项求解与具体势函数无关</li>
+</ul>
+<p>第二个方程不显含时间，称为定态薛定谔方程，方程的解依赖于<span class="arithmatex">\(U(\vec r)\)</span>的具体形式。从数学上，给定一个E就有相应解，但物理上只有特殊的E才满足物理要求的解（四个标准条件）。这意味着能量只能取分立值。特定的E值称为能量本征值，对应的<span class="arithmatex">\(\Phi_E(\vec r)\)</span>称为能量本征函数。所以该方程称为能量算符的本征方程</p>
+<p>对于自由粒子，U=0，则<span class="arithmatex">\(- \frac {\hbar ^2}{2m}\frac {d\Phi^2}{dx^2} = E\Phi\)</span>。为常系数二阶微分方程，求解得<span class="arithmatex">\(\Phi = B_0 e^{\frac i \hbar \sqrt{2mE}x} = B_0 e^{\frac i \hbar Px}\)</span></p>
+<p>则波函数为</p>
+<div class="arithmatex">\[\psi(x,t) = \psi_0 e^{-\frac i \hbar (Et - Px)}\]</div>
+<h2 id="_9">一维无限深方势阱</h2>
+<h3 id="_10">定义</h3>
+<p>势垒无穷大，粒子在势阱内可看做自由粒子：</p>
+<ul>
+<li>受力为0</li>
+<li>势能为0</li>
+</ul>
+<p>但在阱外势能无穷大，在阱壁上受极大斥力，不能到阱外</p>
+<h3 id="_11">阱内求解其定态薛定谔方程</h3>
+<div class="arithmatex">\[\psi = Acoskx + Bsinkx\]</div>
+<p>其中<span class="arithmatex">\(k^2 = \frac {2mE} {\hbar ^2}\)</span>。粒子在阱外出现的概率为0，所以有<span class="arithmatex">\(\psi(x)=0,x\leq 0,x\geq a\)</span>，有边界条件<span class="arithmatex">\(\psi(0) = \psi(a) = 0\)</span>，应该在边界处连续，带入得</p>
+<div class="arithmatex">\[\psi(0) = A = 0, \psi(a) = Bsinka = 0\]</div>
+<p>即有<span class="arithmatex">\(ka = n\pi,n\in \mathbb Z^+\)</span>（因为k为正数），即有<span class="arithmatex">\(k = \frac {n\pi} a\)</span>。此时n称为量子数</p>
+<p>接下来由归一化条件确定B：<span class="arithmatex">\(\int_0^a |\psi|^2 dx = 1\)</span>，得<span class="arithmatex">\(B = \sqrt{\frac 2 a}\)</span>（也可以取负值或乘<span class="arithmatex">\(e^{i\delta}\)</span>）</p>
+<p>得到定态本征解：</p>
+<div class="arithmatex">\[\psi_n(x) = \begin{cases}
+\sqrt{\frac 2 a} sin \frac {n\pi x} a,n\in Z^+,0&lt;x&lt;a\\
+0,x\leq 0,x\geq a
+\end{cases}\]</div>
+<p>由<span class="arithmatex">\(k^2 = \frac {2mE} {\hbar^2}\)</span>，<span class="arithmatex">\(k=\frac {n\pi}a\)</span>得到一维无限深方势阱中的能级公式：</p>
+<div class="arithmatex">\[E_n = \frac {\pi^2\hbar^2n^2} {2ma^2},n\in\mathbb Z^+\]</div>
+<p>总波函数为：</p>
+<div class="arithmatex">\[\psi_n(x,t) = \sqrt{\frac 2 a} sin \frac {n\pi x} a \cdot e^{-\frac i \hbar E_n t}\]</div>
+<h3 id="_12">结论</h3>
+<p>零点能，即n=1时的能量，为<span class="arithmatex">\(E_n = \frac {\pi^2\hbar^2} {2ma^2}\neq 0\)</span></p>
+<p>能量量子化是由薛定谔方程求出，不需要人为假定</p>
+<p>相邻两个能级差<span class="arithmatex">\(\Delta E = E_{n+1} - E_n = (2n+1)\frac {\pi^2\hbar^2} {2ma^2}\)</span>。可见a越大<span class="arithmatex">\(\Delta E\)</span>越小，当a足够大时，能量可看作连续变化</p>
+<p>在势阱内概率密度随x改变，且与n有关（经典理论中是处处均匀的）</p>
+<p>每一个能量本征态对应于德布罗意波的一个特定波长的驻波。阱的宽度一定是德布罗意波半波长的整数倍</p>
+<p>若已知波函数，则可带入薛定谔方程求解能量</p>
+<h2 id="_13">一维有限势阱</h2>
+<h3 id="_14">一侧无限宽</h3>
+<p>势函数<span class="arithmatex">\(U(x) = \begin{cases} 0,x&lt;0\\ U_0,x&gt;0\end{cases}\)</span></p>
+<p>讨论入射能量<span class="arithmatex">\(E&lt;U_0\)</span>的情况。设<span class="arithmatex">\(x&lt;0\)</span>时波函数为<span class="arithmatex">\(\psi_1\)</span>，<span class="arithmatex">\(x&gt;0\)</span>时波函数为<span class="arithmatex">\(\psi_2\)</span></p>
+<div class="arithmatex">\[- \frac {\hbar^2} {2m} \frac {d^2\psi_1(x)} {dx^2} = E\psi_1(x),x\leq 0\]</div>
+<p>化简后得</p>
+<div class="arithmatex">\[\frac {d^2\psi_1(x)} {dx^2} + k^2\psi_1(x) = 0,x\leq 0\]</div>
+<p>其中<span class="arithmatex">\(k^2 = \frac {2mE}{\hbar^2}\)</span></p>
+<p><span class="arithmatex">\(x&gt;0时\)</span>：</p>
+<div class="arithmatex">\[-\frac {\hbar^2} {2m} \frac {d^2\psi_2(x)} {dx^2} + U_0\psi_2(x)= E\psi_2(x),x&gt;0\]</div>
+<p>化简得：</p>
+<div class="arithmatex">\[\frac {d^2\psi_2(x)} {dx^2} -\beta^2 \psi_2(x) = 0,x&gt;0\]</div>
+<p>其中<span class="arithmatex">\(-\beta^2 = \frac {2m}{\hbar^2}(E-U_0)\)</span></p>
+<p>解得通解：</p>
+<div class="arithmatex">\[\psi_1(x)=Ae^{ikx} + Be^{-ikx},x\leq 0\]</div>
+<div class="arithmatex">\[\psi_2(x)=Ce^{-\beta x} + De^{\beta x},x&gt;0\]</div>
+<p>由有限性：<span class="arithmatex">\(D=0\)</span>。于是有</p>
+<div class="arithmatex">\[\psi_2(x) = Ce^{-\beta x}\]</div>
+<p>则粒子有可能在<span class="arithmatex">\(E&lt;U_0\)</span>时到达势垒外，且x越大概率越小，势垒越高概率越小</p>
+<h3 id="_15">结论</h3>
+<p>电子可透入势垒（势垒贯穿）</p>
+<p>若势垒宽度不大，则电子可逸出金属表面，在金属表面形成一层电子气</p>
+<p>若为有限宽势垒，有可能会穿过势垒，且有概率损失（隧道效应、势垒贯穿）。与势垒宽度、势垒高度、能量有关。穿透系数<span class="arithmatex">\(T=\frac {|\psi_2(a)|^2} {|\psi_2(0)|^2} \propto e^{-\frac {2a}\hbar \sqrt{2m(U_0 - E)}}\)</span>。宽度越大时，T越小</p>
+<p>不违背能量守恒，因为波粒二象性，满足不确定关系，<span class="arithmatex">\(\Delta x=a\)</span>很小时，<span class="arithmatex">\(\Delta P\)</span>与<span class="arithmatex">\(\Delta E\)</span>很大，可能会有<span class="arithmatex">\(\Delta E &gt; U_0 - E\)</span></p>
+<h2 id="_16">隧道效应应用</h2>
+<p>隧道二极管、金属场致发射、核的<span class="arithmatex">\(\alpha\)</span>衰变、STM（扫描隧道显微镜，不接触、不破坏样品）</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.min.js"></script>
+      
+    
+  </body>
+</html>
