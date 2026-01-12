@@ -7989,7 +7989,7 @@
 <p>G为连通非完全图，点连通度<span class="arithmatex">\(\kappa(G) = min\{|V'||V'为点割集\}\)</span>。若<span class="arithmatex">\(\kappa(G)\geq k\)</span>，则称G为k-连通图</p>
 <p><span class="arithmatex">\(\lambda(G) = min\{|E'||E'为边割集\}\)</span>，若G非联通，则<span class="arithmatex">\(\lambda(G) = 0\)</span>，若<span class="arithmatex">\(\lambda(G)\geq r\)</span>，则称G为r边-弱连通图</p>
 <ul>
-<li>规定<span class="arithmatex">\(\kappa(K_n) = \lambda(G) = n-1\)</span>。</li>
+<li>规定<span class="arithmatex">\(\kappa(K_n) = \lambda(K_n) = n-1\)</span>。</li>
 <li>若G非连通，则<span class="arithmatex">\(\kappa(G) = \lambda(G) = 0\)</span></li>
 </ul>
 <p>定理：<span class="arithmatex">\(\kappa(G)\leq \lambda(G) \leq \delta(G)\)</span></p>
@@ -8008,7 +8008,7 @@
 <li>D单向连通当且仅当D中存在经过每个顶点至少一次的通路</li>
 </ul>
 <h2 id="_9">扩大路径法</h2>
-<p>设G为n阶无向图，E不空，设<span class="arithmatex">\(\Gamma_l\)</span>为G中的一条路径，若次路径的终点与起点与路径外的顶点相连，就将他们扩到路径中，继续这一过程，直到最后得到的路径不与路径外的顶点相邻为止。。</p>
+<p>设G为n阶无向图，E不空，设<span class="arithmatex">\(\Gamma_l\)</span>为G中的一条路径，若次路径的终点与起点与路径外的顶点相连，就将他们扩到路径中，继续这一过程，直到最后得到的路径不与路径外的顶点相邻为止。</p>
 <p>设最后得到的路径为<span class="arithmatex">\(\Gamma_{l+k}\)</span>，称其为极大路径。有向图中类似，只不过需要注意保证有向边的一致性</p>
 <p>极大路径不唯一，不一定是图中最长的路径。无向简单图中极大路径长度<span class="arithmatex">\(\geq \delta (G)\)</span></p>
 <blockquote>
@@ -8018,7 +8018,7 @@
 <p>设<span class="arithmatex">\(v_x\)</span>是离<span class="arithmatex">\(v_0\)</span>最远的顶点，于是<span class="arithmatex">\(v_0v_1\dots v_x v_0\)</span>为G中长度<span class="arithmatex">\(\geq \delta + 1\)</span>的圈</p>
 </blockquote>
 <h2 id="_10">二部图</h2>
-<p>设G为无向图，若能将V分成<span class="arithmatex">\(V_1,V_2\)</span>，且<span class="arithmatex">\(V_1\cup V_2 = V,V_1\cap V_2 = \phi\)</span>，使得G中每条边两个顶点都是一个属于<span class="arithmatex">\(V_1\)</span>，一个属于<span class="arithmatex">\(V_2\)</span>，则称G为二部图（或二分图、偶图），称<span class="arithmatex">\(V_1,V_2\)</span>为互补顶点集。常将二部图极为<span class="arithmatex">\(&lt;V_1,V_2,E&gt;\)</span></p>
+<p>设G为无向图，若能将V分成<span class="arithmatex">\(V_1,V_2\)</span>，且<span class="arithmatex">\(V_1\cup V_2 = V,V_1\cap V_2 = \phi\)</span>，使得G中每条边两个顶点都是一个属于<span class="arithmatex">\(V_1\)</span>，一个属于<span class="arithmatex">\(V_2\)</span>，则称G为二部图（或二分图、偶图），称<span class="arithmatex">\(V_1,V_2\)</span>为互补顶点集。常将二部图记为<span class="arithmatex">\(&lt;V_1,V_2,E&gt;\)</span></p>
 <p>若G是简单二部图，且<span class="arithmatex">\(V_1\)</span>中每个顶点均与<span class="arithmatex">\(V_2\)</span>中所有顶点相邻，则称G为完全二部图，记为<span class="arithmatex">\(K_{r,s}\)</span>，其中<span class="arithmatex">\(r=|V_1|,s=|V_2|\)</span>。</p>
 <p>n阶零图为二部图</p>
 <p>无向图为二部图当且仅当G中无奇数长度的圈（奇圈）</p>
