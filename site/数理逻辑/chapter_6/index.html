@@ -8137,7 +8137,7 @@
 </ul>
 <h3 id="_6">量词</h3>
 <h4 id="_7">全称量词</h4>
-<p>全称量词: 表达“对所有的”，“每一个”，“对任一个”，“任意的”，“凡”，“都”等。<span class="arithmatex">\(\forall x\)</span> : 对个体域中所有的x。<span class="arithmatex">\(\forall xF(x)\)</span>表示个体域中所有的x具有性质F</p>
+<p>全称量词: 表达“对所有的”，“每一个”，“对任一个”，“任意的”，“凡”，“都”等。<span class="arithmatex">\(\forall x\)</span> : 对个体域中所有的x。<span class="arithmatex">\(\forall xF(x)\)</span>表示个体域中所有的x具有性质F</p>
 <p>为了方便我们通常使用全总个体域，对于每一个客体变元的变化范围，通常用特性谓词加以限制。除非特别说明，否则将采用全总个体域。</p>
 <p>例如符号化下列命题：所有的人都要呼吸，并且每个学生都要考试。</p>
 <p><span class="arithmatex">\(\forall x(M(x)\rightarrow H(x))\land \forall x(P(x)\rightarrow Q(x))\)</span></p>
@@ -8148,7 +8148,7 @@
 <h4 id="_9">总结</h4>
 <p><span class="arithmatex">\(\forall, \exists\)</span>不能随意交换</p>
 <p>正数都大于负数</p>
-<p>令F(x)：x为正数，G(y)：y为负数,<span class="arithmatex">\(L(x,y)：x&gt;y\)</span>。<span class="arithmatex">\(x\forall (F(x)\rightarrow \forall y(G(y)\rightarrow L(x,y)))\)</span>或者<span class="arithmatex">\(\forall x\forall y(F(x)\land G(y)\rightarrow L(x,y))\)</span></p>
+<p>令F(x)：x为正数，G(y)：y为负数,<span class="arithmatex">\(L(x,y)：x&gt;y\)</span>。<span class="arithmatex">\(\forall x (F(x)\rightarrow \forall y(G(y)\rightarrow L(x,y)))\)</span>或者<span class="arithmatex">\(\forall x\forall y(F(x)\land G(y)\rightarrow L(x,y))\)</span></p>
 <p>有的无理数大于有的有理数</p>
 <p>令F(x)：x是无理数，G(y)：y是有理数，<span class="arithmatex">\(L(x,y)：x&gt;y\)</span>。<span class="arithmatex">\(\exists x(F(x)\land \exists y(G(y)\land L(x,y)))\)</span>
 或者    <span class="arithmatex">\(\exists x\exists y(F(x)\land G(y)\land L(x,y))\)</span></p>
@@ -8186,7 +8186,7 @@
 <li>对每个n元函数符号<span class="arithmatex">\(f\in L\)</span>，有一个<span class="arithmatex">\(D_I\)</span>上的n元函数<span class="arithmatex">\(\bar f: D_I^n\mapsto D_I\)</span>，称<span class="arithmatex">\(\bar f\)</span>为f在I中的解释</li>
 <li>对每一个n元谓词符号<span class="arithmatex">\(F\in L\)</span>，有一个<span class="arithmatex">\(D_I\)</span>上的n元谓词常项<span class="arithmatex">\(\bar F\)</span>，称<span class="arithmatex">\(\bar F\)</span>为F在I中的解释</li>
 </ol>
-<p>设公式A, 取个体域<span class="arithmatex">\(D_I\)</span> , 把A中的个体常项符号a、函数符号f、谓词符号F分别替换成它们在I中的解释<span class="arithmatex">\(\bar a,\bar f, \bar F\)</span>，且将A中<strong>自由出现</strong>的个体变项符号x替换成<span class="arithmatex">\(\sigma(x)\)</span> ，则称所得到的公式A'为A在I下的解释, 或A在I下被解释成A'.</p>
+<p>设公式A, 取个体域<span class="arithmatex">\(D_I\)</span> , 把A中的个体常项符号a、函数符号f、谓词符号F分别替换成它们在I中的解释<span class="arithmatex">\(\bar a,\bar f, \bar F\)</span>，且将A中<strong>自由出现</strong>的个体变项符号x替换成<span class="arithmatex">\(\sigma(x)\)</span>（赋值） ，则称所得到的公式A'为A在I下的解释, 或A在I下被解释成A'.</p>
 <h2 id="_16">闭式</h2>
 <p>若公式A中不含自由出现的个体变项，则称A为封闭的公式，称为闭式</p>
 <p>闭式在任何解释下都是命题</p>

@@ -8411,7 +8411,7 @@
 <p><span class="arithmatex">\(t(R) = R\)</span>等价于则R是传递的</p>
 </li>
 <li>
-<p>若R自反，则<span class="arithmatex">\(s(R),t(R)\)</span>是传递的</p>
+<p>若R自反，则<span class="arithmatex">\(s(R),t(R)\)</span>是自反的</p>
 </li>
 <li>若R对称，则<span class="arithmatex">\(r(R),t(R)\)</span>是对称的</li>
 <li>
@@ -8442,7 +8442,7 @@
 <h3 id="_15">映射关系</h3>
 <h4 id="_16">定义</h4>
 <p>单值的关系，记为映射。映射常记为f。<span class="arithmatex">\(f(\{x\}) = \{y\}\)</span>，可简写为<span class="arithmatex">\(f(x) = y\)</span>。判断映射是否相等：<span class="arithmatex">\(f \subset g, g \subset f\)</span>（判断集合是否相等）。从A到B的映射的集合记为<span class="arithmatex">\(B^A = \{f|f: A\mapsto B\}\)</span>。<span class="arithmatex">\(|B^A|= |B|^{|A|}\)</span>。空函数：若<span class="arithmatex">\(A=\phi\)</span>，<span class="arithmatex">\(B^A = B^\phi = \{\phi\}\)</span>，称为空函数。但值域不能为空</p>
-<p>若<span class="arithmatex">\(domf = A,ranf \in B\)</span>，则称f为A到B的映射，B称为陪域（历史原因）。值域子集<span class="arithmatex">\(B_1\)</span>完全原像：<span class="arithmatex">\(f^{-1}(B_1) = \{x|x\in A \land f(x) \in B_1\}\)</span></p>
+<p>若<span class="arithmatex">\(domf = A,ranf \subset B\)</span>，则称f为A到B的映射，B称为陪域（历史原因）。值域子集<span class="arithmatex">\(B_1\)</span>完全原像：<span class="arithmatex">\(f^{-1}(B_1) = \{x|x\in A \land f(x) \in B_1\}\)</span></p>
 <p>特殊映射：</p>
 <ul>
 <li>若f为单根的，则为单射（只与关系本体有关）</li>
@@ -8454,7 +8454,7 @@
 <li><span class="arithmatex">\(f: A \rightarrow B, A_1 \subset A, B_1 \subset B\)</span>, 则<span class="arithmatex">\(f^{-1}[f[A_1]]\supset A_1\)</span>（非单造成，若相等，可等价于是单射）, <span class="arithmatex">\(f[f^{-1}[B_1]]\subset B_1\)</span>（非满造成，若相等，可等价于是满射）</li>
 <li>映射的复合仍为映射。<span class="arithmatex">\(证明&lt;x,y_1&gt;,&lt;x,y_2&gt;\in f\circ g \Leftrightarrow y_1 = y_2：即存在&lt;x,t&gt;\in f,&lt;t,y_1&gt; \in g,且&lt;x,u&gt;\in f,&lt;u,y_2&gt;\in g，由映射得，t=u，即y_1=y_2\)</span>。推论：</li>
 <li><span class="arithmatex">\(dom(f\circ g) = \{x \in domf | f(x) \in dom g\}\)</span></li>
-<li><span class="arithmatex">\((f \circ g)(x) = g(f(x))\)</span></li>
+<li><span class="arithmatex">\((f \circ g)(x) = f(g(x))\)</span></li>
 <li><span class="arithmatex">\(f:A\rightarrow B, g:B\rightarrow C, 则 f\circ g:A\rightarrow C，且dom(f\circ g) = dom f\)</span></li>
 <li>若f为A到B的双射，则<span class="arithmatex">\(f^{-1}\)</span>为B到A的双射。<span class="arithmatex">\(f \circ f^{-1} = I_A, f \circ f^{-1} = I_B\)</span>。若A=B，则<span class="arithmatex">\(f \circ f^{-1} = f^{-1} \circ f= I\)</span>。逆命题成立：<span class="arithmatex">\(若对f:A\rightarrow B，f为双射，当且仅当\exist g:B\rightarrow A, f \circ g = I_A, g \circ f = I_B\)</span></li>
 <li><span class="arithmatex">\(f:A\rightarrow B\)</span>为单射 <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\exist g : B \rightarrow A,f \circ g = I_A\)</span>。此时<span class="arithmatex">\(g\)</span>唯一，为<span class="arithmatex">\(f^{-1}\)</span>。</li>

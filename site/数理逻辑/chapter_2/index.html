@@ -8253,7 +8253,7 @@
 <li>排中律、矛盾率</li>
 <li>蕴含等值式：<span class="arithmatex">\(A\rightarrow B \Leftrightarrow \neg A \lor B\)</span></li>
 <li>等价等值式</li>
-<li>假言易位（逆否命题）：<span class="arithmatex">\(A\rightarrow B \Leftrightarrow \neg B\leftarrow \neg A\)</span></li>
+<li>假言易位（逆否命题）：<span class="arithmatex">\(A\rightarrow B \Leftrightarrow \neg B\rightarrow \neg A\)</span></li>
 <li>归谬论：<span class="arithmatex">\((A \rightarrow B) \land (A\rightarrow \neg B) \Leftrightarrow \neg A\)</span></li>
 </ul>
 <p>对偶式：在给定命题公式A中，将<span class="arithmatex">\(\land\)</span>和<span class="arithmatex">\(\lor\)</span>，特殊变元0、1互相替代，所得公式<span class="arithmatex">\(A^*\)</span>称为A的对偶式</p>
@@ -8426,22 +8426,22 @@
 </thead>
 <tbody>
 <tr>
-<td><span class="arithmatex">\(\neg p \lor \neg q\)</span></td>
+<td><span class="arithmatex">\(p \lor q\)</span></td>
 <td>0 0</td>
 <td><span class="arithmatex">\(M_0\)</span></td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(\neg p \lor q\)</span></td>
+<td><span class="arithmatex">\(p \lor \neg q\)</span></td>
 <td>0 1</td>
 <td><span class="arithmatex">\(M_1\)</span></td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(p \lor \neg q\)</span></td>
+<td><span class="arithmatex">\(\neg p \lor q\)</span></td>
 <td>1 0</td>
 <td><span class="arithmatex">\(M_2\)</span></td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(p \lor q\)</span></td>
+<td><span class="arithmatex">\(\neg p \lor\neg  q\)</span></td>
 <td>1 1</td>
 <td><span class="arithmatex">\(M_3\)</span></td>
 </tr>
@@ -8496,7 +8496,7 @@
 </table>
 <ol>
 <li>每一个极大项当其真值指派与编码相同时，真值为0，在其余<span class="arithmatex">\(2^n -1\)</span>种指派情况下均为1</li>
-<li>任意两个不同极小大的合取式永真</li>
+<li>任意两个不同极大的合取式永真</li>
 <li>全体极大项的合取式<span class="arithmatex">\(\Pi M_i\)</span>永假</li>
 <li>n个命题有<span class="arithmatex">\(2^n\)</span>个极大项</li>
 </ol>

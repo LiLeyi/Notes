@@ -7994,7 +7994,7 @@
 <p>代数系统角度的定义：若<span class="arithmatex">\(&lt;S,*,\circ&gt;\)</span>是具有两个二元运算的代数系统，若<span class="arithmatex">\(*,\circ\)</span>适合交换律、结合律、吸收率，则可以适当定义S中的偏序<span class="arithmatex">\(\preceq\)</span>，使得<span class="arithmatex">\(&lt;S,\preceq&gt;\)</span>构成格。且有<span class="arithmatex">\(a\land b = a*b,a\lor b = a\circ b\)</span>（吸收率可以推出幂等律<span class="arithmatex">\(a*a = a*(a\circ(a*a))=a\)</span>）</p>
 <p>等价定义：若<span class="arithmatex">\(&lt;S,*,\circ&gt;\)</span>是具有两个二元运算的代数系统，若<span class="arithmatex">\(*,\circ\)</span>适合交换律、结合律、吸收率，则称<span class="arithmatex">\(&lt;S,*,\circ&gt;\)</span>构成格</p>
 <h3 id="_4">对偶原理</h3>
-<p>设f是含有格中元素及符号<span class="arithmatex">\(=,\preceq,\succeq, lor, \land\)</span>的命题，令<span class="arithmatex">\(f^*\)</span>是f中的<span class="arithmatex">\(\preceq\)</span>替换成<span class="arithmatex">\(\succeq\)</span>，<span class="arithmatex">\(\succeq\)</span>替换成<span class="arithmatex">\(\preceq\)</span>，<span class="arithmatex">\(\lor\)</span>替换成<span class="arithmatex">\(\land\)</span>，<span class="arithmatex">\(\land\)</span>替换成<span class="arithmatex">\(\lor\)</span>，所得到的命题，称<span class="arithmatex">\(f^*\)</span>为f的对偶命题</p>
+<p>设f是含有格中元素及符号<span class="arithmatex">\(=,\preceq,\succeq, \lor, \land\)</span>的命题，令<span class="arithmatex">\(f^*\)</span>是f中的<span class="arithmatex">\(\preceq\)</span>替换成<span class="arithmatex">\(\succeq\)</span>，<span class="arithmatex">\(\succeq\)</span>替换成<span class="arithmatex">\(\preceq\)</span>，<span class="arithmatex">\(\lor\)</span>替换成<span class="arithmatex">\(\land\)</span>，<span class="arithmatex">\(\land\)</span>替换成<span class="arithmatex">\(\lor\)</span>，所得到的命题，称<span class="arithmatex">\(f^*\)</span>为f的对偶命题</p>
 <p>对偶原理：若f为真，则<span class="arithmatex">\(f^*\)</span>为真</p>
 <p>运算律：</p>
 <ul>
@@ -8007,7 +8007,7 @@
 <ul>
 <li><span class="arithmatex">\(a\preceq b \Leftrightarrow a\lor b = b\Leftrightarrow a\land b = a\)</span></li>
 <li>保序性：<span class="arithmatex">\(a\preceq b,c\preceq d\Rightarrow a\lor c\preceq b\lor d,a\land c\preceq b\land d\)</span></li>
-<li>分配率一般不成立：<span class="arithmatex">\(a\lor(b\land c)\preceq (a\lor b)\land (a\lor c)\)</span></li>
+<li>分配率一般不成立：<span class="arithmatex">\(a\lor(b\land c)\preceq (a\lor b)\land (a\lor c), a\land (b\lor c) \succeq (a\land b)\lor (a\land c)\)</span>。但若其中一个成立，另外一个必成立</li>
 <li>对偶原理</li>
 </ul>
 <h2 id="_6">分配格</h2>
