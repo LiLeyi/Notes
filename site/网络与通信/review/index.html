@@ -9348,7 +9348,7 @@
 <li>倾斜轨道</li>
 <li>按轨道周期</li>
 <li>回归/准回归轨道（星下点轨迹重复）</li>
-<li>飞回归轨道）星下点轨迹不重复）</li>
+<li>非回归轨道（星下点轨迹不重复）</li>
 <li>按高度</li>
 <li>低轨道LEO</li>
 <li>中轨道MEO</li>
@@ -9431,7 +9431,7 @@
 <li>运输层：TCP（传输控制协议。面线连接、可靠的数据传输服务。基本单位为报文段）、UDP（用户数据报协议。无连接的尽最大努力的数据传输服务。传输单位为用户数据报）</li>
 <li>网络层：IP</li>
 <li>数据链路层</li>
-<li>物理层：协议确定插头引脚数量，及如何连接</li>
+<li>物理层：协议确定插头引脚数量，及如何连接。各种传输媒介（光纤等）在<strong>物理层之下</strong></li>
 </ul>
 <p>概念：</p>
 <ul>
@@ -9458,7 +9458,7 @@
 <ul>
 <li><span class="arithmatex">\(\frac {a_0} 2 = \frac 1 T \int_{-T/2}^{T/2} f(t) dt\)</span>，称为f(t)的均值、直流分量</li>
 <li><span class="arithmatex">\(a_n = \frac 2 T \int_{-T/2}^{T/2} f(t) cos n\omega_0 t dt\)</span>，称为f(t)的第n次余弦波的振幅</li>
-<li><span class="arithmatex">\(a_n = \frac 2 T \int_{-T/2}^{T/2} f(t) sin n\omega_0 t dt\)</span>，称为f(t)的第n次正弦波的振幅</li>
+<li><span class="arithmatex">\(b_n = \frac 2 T \int_{-T/2}^{T/2} f(t) sin n\omega_0 t dt\)</span>，称为f(t)的第n次正弦波的振幅</li>
 </ul>
 <p><strong>傅里叶变换</strong></p>
 <div class="arithmatex">\[f(t)= \frac 1 {2\pi} \int_{-\infty}^\infty F(\omega) e^{j\omega t} d\omega\]</div>
@@ -9628,7 +9628,7 @@ P_\xi (\omega) = \int_{-\infty}^\infty R(\tau) e^{-j\omega \tau}d\tau
 <p>将中心小区附近最近的六个同信道小区连接，得到更大的六边形，其半径就是算出的D。大六边形面积为：</p>
 <div class="arithmatex">\[A_{Large} = \frac 3 2 \sqrt 3 D^2\]</div>
 <p>小区（小六边形）面积为：</p>
-<div class="arithmatex">\[A_{Small} = \sqrt 3 2 \sqrt 3 R^2\]</div>
+<div class="arithmatex">\[A_{Small} = \frac{3} 2 \sqrt 3 R^2\]</div>
 <p>则大区中包含的小区数目为：</p>
 <div class="arithmatex">\[\frac {A_{Large}} {A_{Small}} = \frac {D^2} {R^2} = 3(i^2 + ij + j^2) = N + 6 (\frac 1 3 N) = 3N\]</div>
 <p>即得<span class="arithmatex">\(N=i^2+ij+j^2\)</span>。</p>
