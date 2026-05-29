@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#on-the-complexity-of-2d-discrete-fixed-point-problem" class="md-skip">
+        <a href="#complexity-class" class="md-skip">
           跳转至
         </a>
       
@@ -6714,6 +6714,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    第二章
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -6723,6 +6734,85 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2ppad-hard" class="md-nav__link">
+    <span class="md-ellipsis">
+      2人博弈纳什均衡求解是PPAD-hard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      纳什均衡求解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="纳什均衡求解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lemke-howson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lemke-Howson算法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      支持枚举算法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lmm" class="md-nav__link">
+    <span class="md-ellipsis">
+      LMM算法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -7098,6 +7188,27 @@
   
   <span class="md-ellipsis">
     第七章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E4%B8%8E%E9%80%9A%E4%BF%A1/review/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    复习
   </span>
   
 
@@ -8739,6 +8850,74 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2ppad-hard" class="md-nav__link">
+    <span class="md-ellipsis">
+      2人博弈纳什均衡求解是PPAD-hard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      纳什均衡求解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="纳什均衡求解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lemke-howson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lemke-Howson算法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      支持枚举算法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lmm" class="md-nav__link">
+    <span class="md-ellipsis">
+      LMM算法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -8752,7 +8931,208 @@
                   
 
 
-<h1 id="on-the-complexity-of-2d-discrete-fixed-point-problem">On the complexity of 2D discrete fixed point problem</h1>
+<h1 id="complexity-class">复杂类Complexity Class</h1>
+<h2 id="_1">常见问题</h2>
+<p>计算机理论研究分两方面：</p>
+<ul>
+<li>算法</li>
+<li>复杂度</li>
+</ul>
+<blockquote>
+<p>NP search问题：<span class="arithmatex">\(R \subset \{0, 1\}^* \times \{0, 1\}^*\)</span>，</p>
+<p>问题类<span class="arithmatex">\(Q_R\)</span>：</p>
+<ul>
+<li>给定输入<span class="arithmatex">\(x\in \{0,1\}^*\)</span></li>
+<li>输出<span class="arithmatex">\(y\in \{0,1\}\)</span>，使得<span class="arithmatex">\((x,y)\in R\)</span>，否则无解输出no</li>
+</ul>
+<p>常见问题：</p>
+<ul>
+<li>3SAT</li>
+<li>旅行商问题</li>
+</ul>
+<p>TFNP（Total Functional NP，Total且为NP search问题）</p>
+<p>total：任何输入x，都一定存在y，使得<span class="arithmatex">\((x,y) \in R\)</span></p>
+<p>规约：对两个不同问题的<span class="arithmatex">\(Q_{R1},Q_{R2}\)</span>。如果存在两个函数<span class="arithmatex">\(f,g\)</span>，使得对任何输入<span class="arithmatex">\(x\in Q_{R_1}\)</span>，如果<span class="arithmatex">\((f(x), y) \in R_2\)</span>（因为为TFNP，所以一定有解y），则有<span class="arithmatex">\((x,g(y)) \in R_1\)</span>。注：可能<span class="arithmatex">\(R_2\)</span>有很多y的解，但<span class="arithmatex">\(g(y)\)</span>都要是x在<span class="arithmatex">\(R_1\)</span>中的解</p>
+<p>思想：若<span class="arithmatex">\(R_2\)</span>能解决，则构造f，g就能解决<span class="arithmatex">\(R_1\)</span></p>
+<p><span class="arithmatex">\(R_1 \leq R_2\)</span>，即<span class="arithmatex">\(R_2\)</span>比<span class="arithmatex">\(R_1\)</span>难，<span class="arithmatex">\(R_2\)</span>解决了<span class="arithmatex">\(R_1\)</span>也能解决，但<span class="arithmatex">\(R_1\)</span>解决了，<span class="arithmatex">\(R_2\)</span>不一定解决。若<span class="arithmatex">\(R_1\leq R_2, R_2\leq R_1\)</span>，则称<span class="arithmatex">\(R_1,R_2\)</span>等价</p>
+<p>根据怎么证明TFNP一定有解可以对其进行细分</p>
+<ul>
+<li>PPAD：在有向图中，每个点入度出度至多为1</li>
+<li>PPA：在无向图中每个点度数至多为2</li>
+<li>PPP：鸽笼原理</li>
+</ul>
+<p>PPAD：为问题集合，<span class="arithmatex">\(\{Q| Q\leq LEAFD\}\)</span>，LEAFD即End-of-A-Line问题</p>
+<ul>
+<li>输入：<span class="arithmatex">\((M, 0^k)\)</span>，M为图灵机，<span class="arithmatex">\(\forall v \in\{0, 1\}^k, M(v) = (u_1, u_2), u_1, u_2 \in \{0,1\}^k \cup \{no\}\)</span>，即向M输入一个点，输出向前是哪个点，向后是哪个点；<span class="arithmatex">\(0^k\)</span>为原点，<span class="arithmatex">\(M(0^k) = (no, 1^k)\)</span></li>
+<li>输出点<span class="arithmatex">\(v^* \neq 0^k\)</span>，使得<span class="arithmatex">\(M(v^*)= \{u ,no\} or \{no, u\}\)</span>，即<span class="arithmatex">\(v^*\)</span>度为1</li>
+</ul>
+<p>LEAFD为PPAD中最难的问题</p>
+<p>若<span class="arithmatex">\(Q\leq LEAFD，则称在PPAD中\)</span>。若<span class="arithmatex">\(LEAFD\leq Q\)</span>，则称Q为PPAD-hard。如果<span class="arithmatex">\(Q\in PPAD\)</span>。如果<span class="arithmatex">\(Q\in PPAD\)</span>且<span class="arithmatex">\(Q\leq PPAD-hard\)</span>，则称为PPAD完备的</p>
+<p>证明2D-sperner问题为PPAD-hard</p>
+<ul>
+<li>输入：<span class="arithmatex">\((F,0^k)\)</span>，其中F用于确定每个点的颜色</li>
+<li>输出：<span class="arithmatex">\((p, p+e_1, p + e_2)\ or\ (p, p-e_1, p - e_2)\)</span>，即全色三角形</li>
+</ul>
+<p>...</p>
+<p>2D-Brouwer问题</p>
+<ul>
+<li>输入：与2D-sperner一致</li>
+<li>输出：输出顶点有三种颜色的正方形</li>
+</ul>
+<p>2D-Brouwer*问题：</p>
+<ul>
+<li>输入：与2D-sperner一致</li>
+<li>输出：正方形对角线只有一种方向，化为多个三角形。输出顶点有三种颜色的三角形</li>
+</ul>
+<p>易得<span class="arithmatex">\(2D-Brouwer\leq 2D-sperner\)</span>，证<span class="arithmatex">\(2D-sperner\leq 2D-Brouwer\)</span>。接下来将2D-Brouwer*问题转化为2D-Brouwer问题（即是否有全色三角形）</p>
+<p>将变成扩大三倍。原来的正方形是：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th>2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>变为：</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th>1</th>
+<th>2</th>
+<th>2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>然后进行三角剖分即可（这样只有中间的左右两个正方形可能有三个颜色，其余正方形都只可能有两个颜色）</p>
+</blockquote>
+<h2 id="2ppad-hard">2人博弈纳什均衡求解是PPAD-hard</h2>
+<p>对于<span class="arithmatex">\(rank(A+B) \geq 2\)</span>时，为PPAD-hard</p>
+<pre class="mermaid"><code>flowchart TD
+A[PPAD] --&gt; B[2D-Sperner]
+B--&gt; C[PL-Brouwer]
+C--&gt; D[2-Nash]
+A -.-&gt; C
+A -.-&gt; D</code></pre>
+<p>Piecewise-Linear：分段线性</p>
+<p>起点：2D-Sperner，先证其可规约到2D-Brouwer</p>
+<p>设正方形区域（内部为三角形），下边为黄色，左边为红色，其余两边为蓝色。对颜色进行编码，保证其不移动出整个区域：</p>
+<ul>
+<li><span class="arithmatex">\(D(Blue) = (-1, -1)\)</span></li>
+<li><span class="arithmatex">\(D(Red) = (1, 0)\)</span></li>
+<li><span class="arithmatex">\(D(Yellow) = (0,1)\)</span></li>
+</ul>
+<p><span class="arithmatex">\(g(p) = p + D(p)\)</span>。</p>
+<p>用布尔电路，输入为经过编码后的<span class="arithmatex">\(p_1, p_2\)</span>，经过与或非组合电路（可分别转化1为min、max、1-x），输出<span class="arithmatex">\(a_1,s_1,a_2,s_2\)</span>，<span class="arithmatex">\(D(p) = (a_1 - s_1, a_2 - s_2)\)</span> </p>
+<p>考虑差值<span class="arithmatex">\(q = \sum_i \alpha_i p^i \Rightarrow g(q) = \sum_i \alpha_i g(p^i)\)</span>，所以有<span class="arithmatex">\(g(q) = q + \sum_i \alpha_i D(p^i) = q + D(q)\)</span></p>
+<p>断言：q是g的不动点<span class="arithmatex">\(\Leftrightarrow D(q) = 0 \Leftrightarrow\)</span>q是全色三角形的中心 </p>
+<p>接下来要依据q去求全色三角形的三个顶点坐标。不能用取整，因为不连续。可以在间断点加入线性函数（斜率很大），这样q只有在非常接近整数时，结果才不正确...</p>
+<p>2D-Sperner可以在多项式时间内规约到2D-Brouwer</p>
+<h2 id="_2">纳什均衡求解</h2>
+<h3 id="lemke-howson">Lemke-Howson算法</h3>
+<p>该算法类似单纯形算法，且最坏情况下时间复杂度为指数（对于单纯形问题，若每个常参数都有一个期望为0的小扰动，则时间复杂度大概率为多项式。但对Lemke-Howson算法目前还没证明出）</p>
+<p>Lemke-Howson算法：对应二人纳什均衡。可以得出纳什均衡存在，且求解属于PPAD。<span class="arithmatex">\(G=(A,B)\)</span>，A是行玩家的收益矩阵，B是列玩家的收益矩阵。</p>
+<p>对行玩家：</p>
+<div class="arithmatex">\[x\in \Delta m = \{x\in R^n | x_i \geq 0, \sum_i x_i = 1\}\]</div>
+<p>对列玩家</p>
+<div class="arithmatex">\[y\in \Delta n = \{y\in R^m | y_i \geq 0, \sum_i y_i = 1\}\]</div>
+<p>行玩家收益：<span class="arithmatex">\(x^T Ay\)</span>，列玩家收益：<span class="arithmatex">\(x^T By\)</span>。对两个收益矩阵，全部加上同一个数，纳什均衡不变（相对大小不变），全部同时乘一个正数也不变。</p>
+<p>定义<span class="arithmatex">\(P=\{x\in R^m | x\geq \vec 0, B^T x \leq \vec 1\}, Q = \{y\in R^n | y\geq \vec 0, Ay \leq 1\}\)</span>（两个凸多面体，包围的空间均含原点）。对P、Q中每个非零向量，进行标准化，变为混合策略。</p>
+<p>接下来的思路：使用算法找到<span class="arithmatex">\(x\in P,y \in Q\)</span>，对应纳什均衡，再经过标准化得到纳什均衡解。</p>
+<p>Label：该问题中，总共m+n个。Labels 1...m对应行玩家纯策略，m+1...m+n对应列玩家纯策略。</p>
+<p>对行玩家，<span class="arithmatex">\(x\in P\)</span>如果<span class="arithmatex">\(x_i = 0\)</span>，称为有label<span class="arithmatex">\(i\in \{1,\dots, m\}\)</span>。如果<span class="arithmatex">\(m+j \in \{m+1,\dots, m+n\}\)</span>，使得<span class="arithmatex">\((B^T x)_j = 1\)</span>（即在第j个不等式取等），称为有label<span class="arithmatex">\(m+j\)</span>。（对同一个x，这两种label最多满足一个）</p>
+<p><span class="arithmatex">\(y\in Q\)</span>，如果<span class="arithmatex">\(y_j = 0\)</span>，则称y有label<span class="arithmatex">\(m+j\in \{ m+1, \dots, m+n\}\)</span>。<span class="arithmatex">\((Ay)_i = 1\)</span>，则称y有label<span class="arithmatex">\(i\in [n]\)</span>。（对同一个y，这两种label最多满足一个）</p>
+<p>要使<span class="arithmatex">\(x,y\)</span>的label并集包含所有label（且x，y均非零），此时为纳什均衡（为什么？）</p>
+<p>沿着边界移动，经过交点时，一个不等式变为等式，一个等式变为不等式</p>
+<!-- $$x^T By\geq x^TBy', \forall y' \in \Delta n \Leftrightarrow x^T B y \geq x^T B e_j,j\in[n]$$ -->
+
+<ol>
+<li>从原点开始</li>
+<li>Drop Label k，Label l出现</li>
+<li>当l出现时，原来已经有l了，则放弃原来的老的l。若所有label都满足，则结束。否则回到2（因为老的l消失，还会有新的label出现）</li>
+</ol>
+<h3 id="_3">支持枚举算法</h3>
+<p>适用2人博弈。时间为拟多项式</p>
+<p><span class="arithmatex">\(G=(A,B), A, B \in \mathbb R^{m\times n}\)</span>。纳什均衡定义为：</p>
+<div class="arithmatex">\[x^T A y\geq x'^T Ay, x^T B y\geq x^T By',\forall x', y'\]</div>
+<p>等价定义</p>
+<div class="arithmatex">\[x^T Ay\geq e_i^T Ay, x^T B y \geq x^T B e_j, \forall i,j\]</div>
+<p>即纳什均衡。定义行玩家支撑集，<span class="arithmatex">\(S_R(x) = \{i\in [m] | x_i \neq 0\}\)</span>，定义列玩家支撑集，<span class="arithmatex">\(S_C(y) = \{j\in [n] | y_j \neq 0\}\)</span>。nash均衡中动作的无差别性决定了采取在集合中的动作应该有相同的期望收益，有：</p>
+<div class="arithmatex">\[e_i^T Ay \geq e_j^T Ay, \forall i \in S_R, j\in[m]\]</div>
+<div class="arithmatex">\[x^T Be_i \geq x^T Be_j, \forall i \in S_R, j\in[n]\]</div>
+<div class="arithmatex">\[\sum x_i = 1, \sum y_i = 1\]</div>
+<div class="arithmatex">\[x_i = 0, i \notin S_R\]</div>
+<div class="arithmatex">\[y_j = 0, j \notin S_C\]</div>
+<p>前两个式子：如果存在<span class="arithmatex">\(e_j\)</span>，使得右边大于左边，那么可以把i的策略全部调整到j使收益最大，此时<span class="arithmatex">\(x_i = 0\)</span>，与前提不符。</p>
+<p>然后可以通过线性规划判断是否存在纳什均衡，以及通过线性规划求解，求解时间为多项式。要通过枚举支撑集（为策略集合子集，枚举时间为指数）</p>
+<h3 id="lmm">LMM算法</h3>
+<p>为近似算法。时间为拟多项式</p>
+<p>假设<span class="arithmatex">\(A,B \in [0,1]^{n\times n}\)</span>（矩阵所有元素加上里面元素最小值，再都除里面变化后的最大值。不是正方形可以补为正方形，全补0）</p>
+<p><span class="arithmatex">\(\epsilon\)</span>近似的纳什均衡（<span class="arithmatex">\(\epsilon-ANE\)</span>）：给定<span class="arithmatex">\(\epsilon &gt; 0\)</span>，近似纳什均衡对应策略x，y满足条件<span class="arithmatex">\(x^T A y \geq x'^T A y -\epsilon\)</span>，<span class="arithmatex">\(x^T A y \geq x^T A y' - \epsilon\)</span></p>
+<p><span class="arithmatex">\(\epsilon -WSNE\)</span>（Well-supported）：<span class="arithmatex">\(e_i^T Ay \geq e_k^T Ay -\epsilon , x_i\geq 0, x^T B e_j \geq x^T Be_k - \epsilon, y_j&gt;0\)</span>。这个可以推出上一个，<span class="arithmatex">\(\frac {\epsilon^2} 8-NE\)</span>可以规约到<span class="arithmatex">\(\epsilon-WSNE\)</span></p>
+<p>[LMM03]<span class="arithmatex">\(\forall \epsilon \in (0,1), \exists \epsilon-ANE (x,y), |S_R(x)|,|S_C(y)|\leq O(\frac {logn} {\epsilon^2})\)</span>，所以只需要检查规模小于<span class="arithmatex">\(O(\frac {logn} {\epsilon^2})\)</span>的子集，约为<span class="arithmatex">\(n^{O(logn/(\epsilon^2))} &lt;&lt; n^{logn} &lt;&lt;2^n\)</span>（即不需要用到所有策略，只需要用到对数级别的策略即可）。对这个子集进行支持枚举即可</p>
+<p><strong>通过概率方法证明，在概率空间中支撑集小于<span class="arithmatex">\(O(logn/(\epsilon^2))\)</span></strong></p>
+<p>设<span class="arithmatex">\((x^*,y^*)\)</span>为精确纳什均衡，定义策略k-uniform：存在分布<span class="arithmatex">\(x^*\)</span>，输出为<span class="arithmatex">\([1,\dots, n]\)</span>。，取样k次，得到<span class="arithmatex">\(\tilde x=(x_1,\dots, x_n), x_i = \frac 1 k c_i\)</span>，其中<span class="arithmatex">\(c_i\)</span>为选择到<span class="arithmatex">\(x^*\)</span>中<span class="arithmatex">\(x_i\)</span>的次数。</p>
+<p>接下来证取样次数<span class="arithmatex">\(k= O(logn/(\epsilon^2))\)</span>时，能保证<span class="arithmatex">\(Pr[|e_i^T A y - e_i^T A \tilde{y}| \leq \epsilon / 2,\forall i \in[n]]&gt;0\)</span>或<span class="arithmatex">\(Pr[|x^T A e_j - \tilde x^T A e_j| \leq \epsilon / 2,\forall i \in[n]]&gt;0\)</span>，先证明<span class="arithmatex">\(\tilde x, \tilde y\)</span>为近似纳什均衡（即证<span class="arithmatex">\(e_i^T A\tilde y \leq \tilde x^T A \tilde y + \epsilon\)</span>）</p>
+<div class="arithmatex">\[e_i^T A\tilde y \leq e_i^T Ay + \epsilon / 2 \leq e_{r_i}^T Ay + \epsilon / 2\]</div>
+<p><span class="arithmatex">\(e_{r_i}\)</span>为某次取样的纯策略，在支持集中。<span class="arithmatex">\(\tilde x\)</span>的生成方式和<span class="arithmatex">\(e_{r_i}\)</span>相关：</p>
+<div class="arithmatex">\[e_{r_i}^T Ay + \epsilon/2 \leq \frac 1 k (\sum_{i=1}^k e_{r_i}^T)Ay + \epsilon / 2 \leq \frac 1 k (\sum_{i=1}^k e_{r_i}^T)A\tilde y + \epsilon / 2 + \epsilon / 2 = \tilde x^T A \tilde y + \epsilon\]</div>
+<p>接下来证那两个事件的概率大于0，即证存在混合策略，使得事件内不等式存在</p>
+<blockquote>
+<p>思路：</p>
+<p>要证：</p>
+<div class="arithmatex">\[Pr[\bar E_1 \cap \bar E_2 \cap \dots \cap \bar E_n] &gt; 0\]</div>
+<p>即证，在<span class="arithmatex">\(Pr[E_i] \leq s\)</span>时：</p>
+<div class="arithmatex">\[Pr[\bar E_1 \cap \dots\cap \bar E_n] = 1 - Pr[E_1 \cup E_2 \cup \dots \cup E_n] \geq 1 - \sum Pr[E_i] \geq 1 - ns\]</div>
+<p>即证</p>
+<div class="arithmatex">\[1-ns &gt; 0\]</div>
+</blockquote>
+<p>对于该题，要证<span class="arithmatex">\(Pr[|e_1^T Ay - e_1^T A\tilde{ y}|\geq \epsilon/2]\)</span>（事件设为<span class="arithmatex">\(E_1\)</span>）小于某个小值。可以通过集中不等式证明其有上界。Chernoff不等式：对<span class="arithmatex">\(X_i\sim D, X = \frac 1 k \sum X_i\)</span></p>
+<div class="arithmatex">\[Pr[|X - E[X]| &gt; \delta] \leq 2exp(-2k\delta^2)\]</div>
+<p>则有</p>
+<div class="arithmatex">\[Pr[E_1] \leq 2 exp(-2k(\frac {\epsilon} 2)^2) = 2exp(- \frac {k\epsilon^2} 2)\]</div>
+<p>因为对行玩家有n个事件，列玩家有n个事件，则有不等式：</p>
+<div class="arithmatex">\[4nexp(-k\epsilon^2 / 2) &lt; 1\]</div>
+<p>即</p>
+<div class="arithmatex">\[k&gt; \frac {2log(4n)} {\epsilon^2}\]</div>
+<p>2016，Avaid Rubinstein证明存在理论下界：<span class="arithmatex">\(n^{logn^{1-\delta}}\)</span></p>
+<p>[DFM'22]对于<span class="arithmatex">\(\epsilon=1/3\)</span>的近似纳什平衡,求解有多项式算法。对于<span class="arithmatex">\(\epsilon=1/2\)</span>的WSNE，求解有多项式算法</p>
+<p>[KPS'06]提出<span class="arithmatex">\(\epsilon-NE\)</span>在<span class="arithmatex">\(\epsilon=0.75\)</span>时有多项式算法，后来有0.5、0.38、0.36、0.3339、1/3</p>
+<blockquote>
+<p>方法：Search &amp; Mixing</p>
+<p>找A、B的最大元素，设在各自的矩阵中分别为<span class="arithmatex">\((i_1, j_1), (i_2, j_2)\)</span>，混合策略为<span class="arithmatex">\(x=(e_{i1} + e_{i_2}) / 2, y=(e_{j1} + e_{j_2}) / 2\)</span>。可得<span class="arithmatex">\(\epsilon = 0.75\)</span></p>
+<p>类似对0.5有类似证明</p>
+</blockquote>
+<p>对零和博弈，即<span class="arithmatex">\(A+B = 0\)</span>，冯诺依曼证明零和博弈的纳什平衡求解等价于线性规划</p>
+<p>对于<span class="arithmatex">\(rank(A+B) \geq 2\)</span>时，为PPAD-hard。<span class="arithmatex">\(rank(A+B)=1\)</span>时，为P</p>
+<p>[DFM'22]对于博弈<span class="arithmatex">\((A,B)\)</span>，对<span class="arithmatex">\((A, -A)\)</span>算出纳什均衡<span class="arithmatex">\((x_A,y_A)\)</span>，对<span class="arithmatex">\((B, -B)\)</span>算出纳什均衡<span class="arithmatex">\((x_B,y_B)\)</span>，则<span class="arithmatex">\((x_A, y_B)\)</span>是<span class="arithmatex">\(1/2 + \delta-WSNE\)</span>（用到了K-uniform，且取<span class="arithmatex">\(k=1/\delta\)</span>）</p>
 
 
 

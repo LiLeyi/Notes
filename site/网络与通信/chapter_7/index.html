@@ -12,7 +12,7 @@
         <link rel="prev" href="../chapter_6/">
       
       
-        <link rel="next" href="../../%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/chapter_1/section_1/">
+        <link rel="next" href="../review/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -7237,7 +7237,67 @@
           <li class="md-nav__item">
   <a href="#_13" class="md-nav__link">
     <span class="md-ellipsis">
-      实验带宽积
+      时延带宽积
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rttround-trip-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      往返时间RTT（Round-Trip Time）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      有效数据率
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      利用率
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      计算机网络体系结构
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="计算机网络体系结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      体系结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      实体、协议、服务、服务访问点
     </span>
   </a>
   
@@ -7252,6 +7312,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../review/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    复习
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -9004,7 +9085,67 @@
           <li class="md-nav__item">
   <a href="#_13" class="md-nav__link">
     <span class="md-ellipsis">
-      实验带宽积
+      时延带宽积
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rttround-trip-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      往返时间RTT（Round-Trip Time）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      有效数据率
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      利用率
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      计算机网络体系结构
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="计算机网络体系结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      体系结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      实体、协议、服务、服务访问点
     </span>
   </a>
   
@@ -9135,7 +9276,60 @@ B--&gt;D[互联网工程部IETF（包含互联网工程指导小组IESG）]</cod
 <li>排队时延：分组在路由器输入输出队列中排队等待处理和转发所经历的时延。排队时延的长短往往取决于网络中当时的通信量。当网络的通信量很大时会发生队列溢出，使分组丢失，这相当于排队时延为无穷大。</li>
 </ol>
 <p>总时延等于四个相加</p>
-<h3 id="_13">实验带宽积</h3>
+<p>不能认为发送速率越高总时延越短</p>
+<h3 id="_13">时延带宽积</h3>
+<p>传播时延乘带宽。以比特为单位的链路长度。管道中的比特数表示从发送端发出但尚未达到接收端的比特数</p>
+<h3 id="rttround-trip-time">往返时间RTT（Round-Trip Time）</h3>
+<p>表示从发送方发送完数据，到发送方收到来自接收方的确认总共经历时间</p>
+<p>RTT=节点A到B的传播时延<span class="arithmatex">\(t_p\)</span>+节点B处理排队时延<span class="arithmatex">\(t_{PQB}\)</span>+节点B发送时延<span class="arithmatex">\(t_{TB}\)</span>+节点B到A的传播时延<span class="arithmatex">\(t_p\)</span></p>
+<h3 id="_14">有效数据率</h3>
+<p>有效数据率=数据长度/(发送时间+RTT)</p>
+<h3 id="_15">利用率</h3>
+<p>信道利用率：某信道有百分之几的时间是被利用的（即有数据通过），完全空闲的信道利用率是0</p>
+<p>网络利用率：全网络的信道利用率的加权平均值</p>
+<p>不是越高越好</p>
+<h2 id="_16">计算机网络体系结构</h2>
+<h3 id="_17">体系结构</h3>
+<p>最初的ARPANET设计时提出了分层的设计方法</p>
+<p>ISO/OSI七层结构，为理论模型，过于复杂且运行效率低，层次划分不太合理，有功能重复出现</p>
+<p>事实上的国际标准TCP/IP获得了最广泛的应用</p>
+<p>网络协议组成要素：</p>
+<ul>
+<li>语法：数据与控制信息的结构、格式</li>
+<li>语义：需要发出何种控制信息，完成何种动作以及作出何种回应</li>
+<li>同步：事件的顺序</li>
+</ul>
+<p>分层：</p>
+<ul>
+<li>层次太少：协议复杂</li>
+<li>层次太多：功能重复</li>
+</ul>
+<p>各层完成的主要功能：</p>
+<ul>
+<li>差错控制</li>
+<li>流量控制</li>
+<li>分段、重装</li>
+<li>复用和分用</li>
+<li>连接建立和释放</li>
+</ul>
+<p>体系结构是抽象的，实现是具体的，是在遵循体系结构的前提下的各种软件、硬件</p>
+<p>五层体系结构：</p>
+<ul>
+<li>应用层：通过应用进程间的交互来完成特定网络应用。定义的是应用进程间通信、交互的规则。应用层交互的数据单元称为报文。例如DNS、HTTP、SMTP</li>
+<li>运输层：负责向两台主机中进程之间的通信提供通用的数据传输服务。具有复用、分用的功能。主要使用传输控制协议TCP（面向连接，可靠，传输单位是报文段）、用户数据报协议UDP（提供无连接的尽最大努力的数据传输服务（不保证数据传输的可靠性，传输单位是用户数据报）</li>
+<li>网络层：为分组交换网上不同主机提供通信。两个任务：路由选择、转发。使用无连接网际协议IP</li>
+<li>数据链路层：实现两个相邻节点之间的可靠通信。如发现有差错，就简单地丢弃出错帧</li>
+<li>物理层：实现比特的传输。确定连接电缆的插头应当有多少引脚，如何连接等。传输信息所利用的一些物理媒介在物理层协议之下</li>
+</ul>
+<p>路由器只涉及下面三层</p>
+<p>OSI参考模型把对等层次之间传送的数据单位称为该层的协议数据单元PDU</p>
+<h3 id="_18">实体、协议、服务、服务访问点</h3>
+<p>实体：任何可以发送、接受信息的硬件、软件进程</p>
+<p>协议：控制两个对等实体进行通信的规则的集合</p>
+<p>在协议的控制下，两个对等实体通信使得本层能够向上一层提供服务</p>
+<p>要实现本层协议，还需要使用下层所提供的服务</p>
+<p>注意：协议服务是不一样的，协议是水平的，服务是垂直的。上面的服务用户只能看见服务，不能看见下面的协议</p>
+<p>现在的TCP/IP发生了演变，某些程序可以直接使用IP层，或甚至直接使用最下面的网络接口层</p>
 
 
 

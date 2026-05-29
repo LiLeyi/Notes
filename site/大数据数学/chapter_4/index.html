@@ -570,7 +570,67 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
+      背景
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
       最小哈希
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="最小哈希">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用一个哈希函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用多个哈希函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flajolet-martin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flajolet-Martin算法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      拓展
     </span>
   </a>
   
@@ -7146,6 +7206,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E4%B8%8E%E9%80%9A%E4%BF%A1/review/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    复习
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -8787,7 +8868,67 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
+      背景
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
       最小哈希
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="最小哈希">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用一个哈希函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用多个哈希函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flajolet-martin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flajolet-Martin算法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      拓展
     </span>
   </a>
   
@@ -8808,7 +8949,8 @@
                   
 
 
-<h1 id="_1"></h1>
+<h1 id="_1">最小哈希</h1>
+<h2 id="_2">背景</h2>
 <p>不同元素统计问题</p>
 <p>例如零售店收银员希望根据信用卡号统计在一段时间内有多少位不同的顾客购买了东西</p>
 <p>给定数据流（元素个数n），如何计算里面不同元素（共m个）？</p>
@@ -8817,7 +8959,8 @@
 <li>对输入的每个首次出现的x，用<span class="arithmatex">\(log_2 m\)</span>比特记录（最多消耗<span class="arithmatex">\(nlog_2 m\)</span>比特用于存储，空间复杂度<span class="arithmatex">\(O(nlog_2 m)\)</span></li>
 </ul>
 <p>不可能定理：当<span class="arithmatex">\(n=O(m)\)</span>，在仅浏览数据一遍的约束下，不存在任何确定性算法可以用少于m比特的存储空间准确计算不同元素的个数</p>
-<h2 id="_2">最小哈希</h2>
+<h2 id="_3">最小哈希</h2>
+<h3 id="_4">使用一个哈希函数</h3>
 <p>假设有一个随机哈希函数<span class="arithmatex">\(h: U \mapsto [0,1]\)</span>（可以通过对md5归一化近似<span class="arithmatex">\(h(u) / (2^{128} - 1)\)</span>）</p>
 <p>最小哈希：初始化s=1，对i=1...n，s赋值为<span class="arithmatex">\(min\{s, h(x_i)\}\)</span>。取<span class="arithmatex">\(\frac 1 s - 1\)</span>作为对不同元素个数的估计</p>
 <p>s等于d个取值服从在[0,1]均匀分布的随机变量的最小值，如何分析随机变量s与d的关系（d为不同元素个数）。</p>
@@ -8835,6 +8978,34 @@
 <p>带入切比雪夫不等式</p>
 <div class="arithmatex">\[Pr[|s - E[s]| \geq \epsilon E[s]] = Pr [|s-E[s]| \geq \frac {\epsilon E[s]} {\sqrt{Var[s]} }\sqrt{Var[s]}] \leq \frac {Var[s]} {\epsilon^2 E^2[s]} = \frac d {\epsilon^2 (d+2)} \leq \frac 1 {\epsilon^2}\]</div>
 <p><span class="arithmatex">\(\epsilon&lt;1\)</span>时，不等式无意义，如何改进方法，使右边取值更小</p>
+<h3 id="_5">使用多个哈希函数</h3>
+<p>用多个哈希函数：初始化<span class="arithmatex">\(s_1\dots s_k\)</span>为1，对<span class="arithmatex">\(i=1\dots n\)</span>，<span class="arithmatex">\(s_1 \leftarrow min\{s_1, h_1(x_i)\}\dots, s_k \leftarrow min\{s_k, h_k(x_i)\}\)</span>。问题：用哪个估计：</p>
+<ul>
+<li><span class="arithmatex">\(\frac 1 { \frac {s_1+\dots +s_k} k} - 1 \approx \frac 1 {E(s)} - 1\)</span></li>
+<li><span class="arithmatex">\(\frac 1 k (\frac 1 {s_1} - 1 + \dots + \frac 1 {s_k} -1) \approx E( \frac 1 s - 1)\)</span></li>
+</ul>
+<p>用第一个估计。若所有s都是独立的，有：</p>
+<div class="arithmatex">\[E\{\bar s\} = \frac 1 k \sum E(s_i) = \frac 1 {d+1},Var(\bar s) = \frac 1 k \frac d {(d+1)^2(d+2)}\]</div>
+<p>期望不变，方差缩小至<span class="arithmatex">\(1/k\)</span>。证明：k=2时：</p>
+<div class="arithmatex">\[\begin{align*}
+Var(\frac 1 2 s_1 + \frac 1 2 s_2) &amp;= E(\frac 1 4 s_1^2 + \frac 1 4 s_2^2 + \frac 1 2 s_1 s_2) - (E(\frac 1 2 s_1 + \frac 1 2 s_2))^2 \\
+&amp;= E(\frac 1 4 s_1^2 + \frac 1 4 s_2^2 + \frac 1 2 s_1 s_2) - (E(s_1))^2 \\
+&amp;= \frac 1 2 E(s_1^2) - \frac 1 2 E(s_1)^2 = \frac 1 2 Var(s_1)
+\end{align*}\]</div>
+<p>由切比雪夫不等式：<span class="arithmatex">\(Pr[|\bar s - E[\bar s]| \geq \epsilon E[\bar s]] \leq \frac 1 {k\epsilon^2}\)</span>。额外分析<span class="arithmatex">\(d\)</span>与<span class="arithmatex">\(E(\hat d)\)</span>的关系...（不用掌握），不受n、d影响</p>
+<p>问题：哈希函数较多时计算复杂，且不容易构造k个相互独立的哈希函数</p>
+<h3 id="_6"></h3>
+<p>用一个哈希函数，可以把[0，1]切成很多段，然后每个段分别计算最小哈希值，求平均值。</p>
+<p>一共截为k个段。取一个段，假设q个值落在此段，将他们的哈希值都标准化到[0,1]，则标准化后的最小哈希值可以用来估计q值：<span class="arithmatex">\(q=\frac 1 {minhash} - 1\)</span>.所以对每个段，取最小哈希值均值<span class="arithmatex">\(\overline {minhash}\)</span>近似<span class="arithmatex">\(E(minhash)\)</span>。则数据流中不同元素个数的d为<span class="arithmatex">\(k (\frac 1 {\overline {minhash}} - 1)\)</span></p>
+<h3 id="flajolet-martin">Flajolet-Martin算法</h3>
+<p>哈希为0、1的二进制序列。核心思想：通过估计末尾0个数的最大值R估计不同元素的个数。不同元素的个数越多，最多的0越多。</p>
+<p>用一个0/1数组记录输入元素（二进制）哈希值中右起一串0的最靠左的0出现的位置。</p>
+<p>大概有<span class="arithmatex">\(d/4\)</span>个数让最右边变为1（即mod4=2的数），右起第二位有<span class="arithmatex">\(d/8\)</span>个数可使此为止为1（mod8=4的数）...对右起第i位，有<span class="arithmatex">\(\frac d {2^{i+1}}\)</span>个数让该位置为1</p>
+<p>当<span class="arithmatex">\(i&gt;&gt;log_2 d\)</span>时，第i位大概率为0。为了降低随机性，也可以用多个哈希函数，或将数据平均分成多个段</p>
+<h2 id="_7">拓展</h2>
+<p>线性记数：原理与布隆过滤器类似，数据流处理完毕后，统计整个阵列中依然为0的位数，记为Z。最后根据Z的值，通过公式反推出不同元素总数<span class="arithmatex">\(\hat n\)</span></p>
+<div class="arithmatex">\[P(\text{位置i为空}) = (1-\frac 1 m)^d\]</div>
+<div class="arithmatex">\[P(\text{0的数目}) \approx m (1- \frac 1 m)^d\]</div>
 
 
 

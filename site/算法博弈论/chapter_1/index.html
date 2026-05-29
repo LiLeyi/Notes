@@ -6756,15 +6756,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#complexity-class" class="md-nav__link">
-    <span class="md-ellipsis">
-      复杂类Complexity Class
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -7164,6 +7155,27 @@
   
   <span class="md-ellipsis">
     第七章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E4%B8%8E%E9%80%9A%E4%BF%A1/review/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    复习
   </span>
   
 
@@ -8838,15 +8850,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#complexity-class" class="md-nav__link">
-    <span class="md-ellipsis">
-      复杂类Complexity Class
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -8864,6 +8867,9 @@
 
 <h1 id="_1">基础</h1>
 <p>做第十次课的笔记！！！！！！！！！！！！！！！！！！！！看论文，写报告，做ppt，论文内容（到时51发有关要求）（论文，干了什么事，组员分工，问题怎么研究）</p>
+<p>论课堂报告：选哪篇论文，原因，看完摘要等的问题</p>
+<p>笔记：列出所有课堂内容</p>
+<p>期末报告：用Latex，除了引用最多8页。要有标题，组员名字，摘要（到时会有简单模版）。只需要把某个结论搞懂等。</p>
 <h2 id="_2">正规形式博弈</h2>
 <p>假设：同时决策（Simultaneous Move Game）</p>
 <p>正规形式博弈（Normal Form Game）：以三元组定义博弈<span class="arithmatex">\(G = (N ,S, U)\)</span></p>
@@ -8944,55 +8950,6 @@
 <li>为2，不是解</li>
 </ul>
 <p>则<span class="arithmatex">\(\sum d(R) = n(RYB) + 2n(RRY\ or\ RYY)\)</span>，由握手定理，有<span class="arithmatex">\(\sum d(R) = n(RY\ on\ boundry) + 2n(RY\ inside)\)</span>，易得<span class="arithmatex">\(n(RY\ on\ boundry)\)</span>是奇数（可由归纳法得），则<span class="arithmatex">\(n(RYB)\)</span>为奇数</p>
-</blockquote>
-<h2 id="complexity-class">复杂类Complexity Class</h2>
-<p>计算机理论研究分两方面：</p>
-<ul>
-<li>算法</li>
-<li>复杂度</li>
-</ul>
-<blockquote>
-<p>NP search问题：<span class="arithmatex">\(R \subset \{0, 1\}^* \times \{0, 1\}^*\)</span>，</p>
-<p>问题类<span class="arithmatex">\(Q_R\)</span>：</p>
-<ul>
-<li>给定输入<span class="arithmatex">\(x\in \{0,1\}^*\)</span></li>
-<li>输出<span class="arithmatex">\(y\in \{0,1\}\)</span>，使得<span class="arithmatex">\((x,y)\in R\)</span>，否则无解输出no</li>
-</ul>
-<p>常见问题：</p>
-<ul>
-<li>3SAT</li>
-<li>旅行商问题</li>
-</ul>
-<p>TFNP（Total Functional NP，Total且为NP search问题）</p>
-<p>total：任何输入x，都一定存在y，使得<span class="arithmatex">\((x,y) \in R\)</span></p>
-<p>规约：对两个不同问题的<span class="arithmatex">\(Q_{R1},Q_{R2}\)</span>。如果存在两个函数<span class="arithmatex">\(f,g\)</span>，使得对任何输入<span class="arithmatex">\(x\in Q_{R_1}\)</span>，如果<span class="arithmatex">\((f(x), y) \in R_2\)</span>（因为为TFNP，所以一定有解y），则有<span class="arithmatex">\((x,g(y)) \in R_1\)</span>。注：可能<span class="arithmatex">\(R_2\)</span>有很多y的解，但<span class="arithmatex">\(g(y)\)</span>都要是x在<span class="arithmatex">\(R_1\)</span>中的解</p>
-<p>思想：若<span class="arithmatex">\(R_2\)</span>能解决，则构造f，g就能解决<span class="arithmatex">\(R_1\)</span></p>
-<p><span class="arithmatex">\(R_1 \leq R_2\)</span>，即<span class="arithmatex">\(R_2\)</span>比<span class="arithmatex">\(R_1\)</span>难，<span class="arithmatex">\(R_2\)</span>解决了<span class="arithmatex">\(R_1\)</span>也能解决，但<span class="arithmatex">\(R_1\)</span>解决了，<span class="arithmatex">\(R_2\)</span>不一定解决。若<span class="arithmatex">\(R_1\leq R_2, R_2\leq R_1\)</span>，则称<span class="arithmatex">\(R_1,R_2\)</span>等价</p>
-<p>根据怎么证明TFNP一定有解可以对其进行细分</p>
-<ul>
-<li>PPAD：在有向图中，每个点入度出度至多为1</li>
-<li>PPA：在无向图中每个点度数至多为2</li>
-<li>PPP：鸽笼原理</li>
-</ul>
-<p>PPAD：为问题集合，<span class="arithmatex">\(\{Q| Q\leq LEAFD\}\)</span>，LEAFD即End-of-A-Line问题</p>
-<ul>
-<li>输入：<span class="arithmatex">\((M, 0^k)\)</span>，M为图灵机，<span class="arithmatex">\(\forall v \in\{0, 1\}^k, M(v) = (u_1, u_2), u_1, u_2 \in \{0,1\}^k \cup \{no\}\)</span>，即向M输入一个点，输出向前是哪个点，向后是哪个点；<span class="arithmatex">\(0^k\)</span>为原点，<span class="arithmatex">\(M(0^k) = (no, 1^k)\)</span></li>
-<li>输出点<span class="arithmatex">\(v^* \neq 0^k\)</span>，使得<span class="arithmatex">\(M(v^*)= \{u ,no\} or \{no, u\}\)</span>，即<span class="arithmatex">\(v^*\)</span>度为1</li>
-</ul>
-<p>LEAFD为PPAD中最难的问题</p>
-<p>若<span class="arithmatex">\(Q\leq LEAFD，则称在PPAD中\)</span>。若<span class="arithmatex">\(LEAFD\leq Q\)</span>，则称Q为PPAD-hard。如果<span class="arithmatex">\(Q\in PPAD\)</span>。如果<span class="arithmatex">\(Q\in PPAD\)</span>且<span class="arithmatex">\(Q\leq PPAD-hard\)</span>，则称为PPAD完备的</p>
-<p>证明2D-sperner问题为PPAD-hard</p>
-<ul>
-<li>输入：<span class="arithmatex">\((F,0^k)\)</span>，其中F用于确定每个点的颜色</li>
-<li>输出：<span class="arithmatex">\((p, p+e_1, p + e_2)\ or\ (p, p-e_1, p - e_2)\)</span>，即全色三角形</li>
-</ul>
-<p>...</p>
-<p>2D-Brouwer</p>
-<ul>
-<li>输入：与2D-sperner一致</li>
-<li>输出：输出顶点有三种颜色的正方形</li>
-</ul>
-<p>易得<span class="arithmatex">\(2D-Brouwer\leq 2D-sperner\)</span>，证<span class="arithmatex">\(2D-sperner\leq 2D-Brouwer\)</span></p>
 </blockquote>
 
 

@@ -5277,6 +5277,84 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      用户定义的完整性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      触发器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="触发器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本概念及语法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insert" class="md-nav__link">
+    <span class="md-ellipsis">
+      INSERT触发器工作原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      DELETE触发器工作原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    <span class="md-ellipsis">
+      UPDATE触发器工作原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instead-of" class="md-nav__link">
+    <span class="md-ellipsis">
+      INSTEAD OF触发器工作原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      性能
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7164,6 +7242,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E4%B8%8E%E9%80%9A%E4%BF%A1/review/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    复习
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -8829,6 +8928,84 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      用户定义的完整性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      触发器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="触发器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本概念及语法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insert" class="md-nav__link">
+    <span class="md-ellipsis">
+      INSERT触发器工作原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      DELETE触发器工作原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    <span class="md-ellipsis">
+      UPDATE触发器工作原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instead-of" class="md-nav__link">
+    <span class="md-ellipsis">
+      INSTEAD OF触发器工作原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      性能
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -8875,8 +9052,107 @@
 <li>主表：外键在另一张表中作主/候选键的表</li>
 <li>从表：含有外键的表</li>
 </ul>
-<p>主表中插入元组，不影响从表，不用检查。修改会影响，需做检查，要不就不能改主表主键，要不就要同时改变所有外键的值，要不就设置为空。删除时分RESTRICT和CASCADE或设置为空</p>
+<p>主表中插入元组，不影响从表，不用检查。修改会影响，需做检查，要不就不能改主表主键，要不就要同时改变所有外键的值，要不就设置为空。删除时：</p>
+<ul>
+<li>RESTRICT</li>
+<li>CASCADE（由单个DELETE或UPDATE出发的一系列级联引用不能包含循环）</li>
+<li>设置为空（需要定义外键是否可以为空值，若不能为空只能采用级联或者拒绝）</li>
+</ul>
 <p>从表插入时，只需要进行检查，或进行级联插入。插入时需要检查。删除时可以直接删除</p>
+<h2 id="_5">用户定义的完整性</h2>
+<p>通常属性上的约束条件包括：</p>
+<ul>
+<li>唯一UNIQUE</li>
+<li>非空NOT NULL</li>
+<li>CHECK</li>
+<li>默认值DEFAULT</li>
+</ul>
+<p>元组级：</p>
+<ul>
+<li>CHECK</li>
+</ul>
+<p>插入元组或修改属性值时，RDBMS检查元组上的约束条件是否满足，不满足则拒绝。</p>
+<div class="highlight"><pre><span></span><code><span class="k">CONSTRAINT</span><span class="w"> </span><span class="o">&lt;</span><span class="err">完整性约束条件名</span><span class="o">&gt;</span>
+<span class="err">［</span><span class="k">PRIMARY</span><span class="w"> </span><span class="n">KEY短语</span><span class="w"> </span>
+<span class="w">      </span><span class="o">|</span><span class="w">  </span><span class="k">FOREIGN</span><span class="w"> </span><span class="n">KEY短语</span><span class="w">  </span>
+<span class="w">      </span><span class="o">|</span><span class="w">  </span><span class="n">CHECK短语</span><span class="err">］</span>
+</code></pre></div>
+<p>修改表的完整性限制</p>
+<div class="highlight"><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="err">表名</span><span class="o">&gt;</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="o">&lt;</span><span class="err">约束名</span><span class="o">&gt;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="err">表名</span><span class="o">&gt;</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="o">&lt;</span><span class="err">约束定义</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id="_6">触发器</h2>
+<h3 id="_7">基本概念及语法</h3>
+<p>由事件驱动。是一种特殊类型的存储过程。在对表、视图发出UPDATE、INSERT、DELETE语句时自动执行。作用：</p>
+<ul>
+<li>实现复杂业务规则</li>
+<li>实现比CHECK约束更复杂的数据完整性</li>
+<li>比较数据修改前后的状态</li>
+<li>维护非规范化数据</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="o">&lt;</span><span class="err">触发器名</span><span class="o">&gt;</span>
+<span class="err">{</span><span class="k">BEFORE</span><span class="o">|</span><span class="k">AFTER</span><span class="err">}</span><span class="w"> </span><span class="o">&lt;</span><span class="err">触发事件</span><span class="o">&gt;</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">&lt;</span><span class="err">表名</span><span class="o">&gt;</span>
+<span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="err">{</span><span class="k">ROW</span><span class="o">|</span><span class="k">STATEMENT</span><span class="err">}</span>
+<span class="p">[</span><span class="k">WHEN</span><span class="w"> </span><span class="o">&lt;</span><span class="err">触发条件</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="o">&lt;</span><span class="err">触发动作体</span><span class="o">&gt;</span>
+</code></pre></div>
+<ul>
+<li>触发事件：INSERT、DELETE、UPDATE</li>
+<li>触发事件：BEFORE表示在触发之前，若满足条件，则先执行触发动作体，再执行触发事件的操作。AFTER在触发之后，判断条件是否满足，若满足则执行动作。如果触发事件因为错误(如违反约束或语法错误)而失败，触发器将不会执行</li>
+</ul>
+<p>触发器类型：</p>
+<ul>
+<li>行级触发器：对每个修改的元组都触发触发器的检查和执行</li>
+<li>语句级触发器：只有在SQL语句执行时进行触发条件的检查和触发器的执行</li>
+</ul>
+<p>触发条件：触发条件恒为真，省略WHEN触发条件</p>
+<p>如果触发动作体执行失败，激活触发器的事件会终止执行。触发器的目标表或触发器可能影响的其他对象不发生任何变化</p>
+<p>遵循以下执行顺序</p>
+<ul>
+<li>执行该表上的BEFORE触发器</li>
+<li>激活触发器的SQL语句</li>
+<li>执行该表上的AFTER触发器</li>
+</ul>
+<p>SQL Server中，使用触发器实现级联更改。若在触发表上定义了约束，他们在触发器执行之前检查，若违反约束，则触发器不执行。</p>
+<p>触发器可以引用其他表中的列，跨表只能用触发器。</p>
+<ul>
+<li>Inserted表：存放insert或update语句执行过程中，插入到触发表中的新数据行的副本。inserted表中的行是和触发表中的新数据行相同</li>
+<li>Deleted表：存放delete或update语句执行过程中，删除的旧数据行副本。deleted表和触发表不会有相同的行（因为已经在触发表中删除了）</li>
+</ul>
+<p>触发操作完成后，与触发器相关的表会被自动删除</p>
+<p>创建限制更新数据的触发器，限制将SC表中不及格学生的成绩改为及格：</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">tri_grade</span>
+<span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">SC</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">UPDATE</span>
+<span class="w">    </span><span class="k">AS</span>
+<span class="w">        </span><span class="k">IF</span><span class="w"> </span><span class="k">UPDATE</span><span class="p">(</span><span class="n">Grade</span><span class="p">)</span>
+<span class="w">            </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">INSERTED</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">DELETED</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">INSERTED</span><span class="p">.</span><span class="n">Sno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DELETED</span><span class="p">.</span><span class="n">Sno</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">INSERTED</span><span class="p">.</span><span class="n">Grade</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">60</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">DELETED</span><span class="p">.</span><span class="n">Grade</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">60</span><span class="p">)</span>
+<span class="w">        </span><span class="k">BEGIN</span>
+<span class="w">            </span><span class="n">RAISERROR</span><span class="p">(</span><span class="s1">&#39;不允许将不及格学生的成绩改为及格！&#39;</span><span class="p">)</span>
+<span class="w">            </span><span class="k">ROLLBACK</span>
+<span class="w">        </span><span class="k">END</span>
+</code></pre></div>
+<p>这里默认为AFTER触发器</p>
+<p>一个表中只能有一个INSTEAD OF（事件）触发器。指定执行触发器而不是执行触发的SQL语句，从而代替触发语句的操作。可使一般不支持更新的视图可以被更新，截获对视图的操作，将其重定向底层表</p>
+<h3 id="insert">INSERT触发器工作原理</h3>
+<p>执行时，插入的行被记录到inserted表和触发表中，然后执行动作</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">OrdDet_Insert</span>
+<span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="k">Order</span><span class="w"> </span><span class="n">Details</span><span class="p">]</span>
+<span class="w">    </span><span class="k">FOR</span><span class="w"> </span><span class="k">INSERT</span>
+<span class="w">    </span><span class="k">AS</span>
+<span class="w">        </span><span class="k">UPDATE</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">UnitsInStock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">P</span><span class="p">.</span><span class="n">UnitsInStock</span><span class="w"> </span><span class="err">–</span><span class="w"> </span><span class="n">I</span><span class="p">.</span><span class="n">Quantity</span><span class="p">)</span>
+<span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">Products</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Inserted</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">I</span>
+<span class="w">        </span><span class="k">ON</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">ProductID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I</span><span class="p">.</span><span class="n">ProductID</span>
+</code></pre></div>
+<h3 id="delete">DELETE触发器工作原理</h3>
+<p>不会被TRUNCATE TABLE语句</p>
+<p>在定义了 DELETE 触发器的表上执行 DELETE 语句，DELETE 语句删除的行被记录下来。然后触发器动作被执行</p>
+<h3 id="update">UPDATE触发器工作原理</h3>
+<p>UPDATE 语句可以考虑为两个步骤：DELETE 步骤捕获数据的前像，INSERT 步骤捕获数据的后像。当在定义了触发器的表上执行 UPDATE 语句的时候,原行（前像）被移到 deleted 表中，而更新的行（后像）则插入 inserted 表中。触发器可以检索 deleted 和 inserted 表以及被更新的表，确定是否更新了多行以及如何执行触发器动作</p>
+<h3 id="instead-of">INSTEAD OF触发器工作原理</h3>
+<p>可以在表、视图上定义该触发器，代替原触发动作执行，增加了视图上所能进行的更新的种类。不能再具有WITH CHECK OPTION选项的视图上创建该触发器</p>
+<p>对视图UPDATE时，INSTEAD OF 触发器将更新导向基表。允许更新原先不可更新的视图，引发触发器的的动作本身不发生作用</p>
+<h3 id="_8">性能</h3>
+<p>Inserted 和 deleted 总是在内存中而不是在磁盘上。所引用的表和所影响的行的数目决定了触发器的执行时间。只在需要的时候使用触发器，触发器的系统开销更大,在使用触发器之前考虑使用约束。定义语句尽量简单。在递归触发器定义中，加入递归终止检查语句。尽量减少触发器中 ROLLBACK 语句的使用，当回滚事务的时候，SQL Server 要撤销所有已经执行的动作，系统开销非常大</p>
 
 
 
