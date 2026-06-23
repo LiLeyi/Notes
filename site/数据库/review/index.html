@@ -9551,7 +9551,7 @@
 <p>关系数据库是一组关系模式的集合</p>
 <p>完整性约束：</p>
 <ul>
-<li>实体完整性</li>
+<li>实体完整性：主键不能为空或部分为空</li>
 <li>参照完整性</li>
 <li>用户自定义完整性</li>
 </ul>
@@ -9561,6 +9561,10 @@
 <li>属性重命名</li>
 <li>外连接（左、右、完全）</li>
 </ul>
+<p>关系是一种规范化了的二维表中行的集合</p>
+<p>关系模式(Relation Schema)是对关系的描述，该描述包括关系名、属性名、属性的类型和长度，以及属性间固有的数据关联关系。关系模式一般简记为关系名和属性名的集合，R(A1, A2，，An)，或仅用关系名R表示。</p>
+<p>关系模式的集合称为关系数据库模式。关系数据库模式中的每个关系模式上的关系的集合称为关系数据库</p>
+<p>能唯一标识一个元组的一个属性或属性组称为超键（键），不含多余属性的超键称为候选键，然后可选定一个候选键为主键。若一个键包含多个属性，称为联合键。包含所有属性的键称为全键</p>
 <h2 id="ch4">CH4</h2>
 <p>修改基本表</p>
 <div class="highlight"><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="err">表名</span><span class="o">&gt;</span>
@@ -9710,7 +9714,15 @@ F[查询计划执行]</code></pre>
 <li>数据加密技术：保护敏感数据的传输、存储，可以对数据库敏感数据提供额外的保护</li>
 <li>数据库审计：在数据库运行期间，记录数据库的访问情况，以利用审计数据分析数据库是否受到非法存取</li>
 </ul>
+<p>密级：绝密TS、秘密S、可信C、公开P</p>
+<p>统计数据库三个规则：</p>
+<ul>
+<li>每次查询至少涉及N个以上的记录（N足够大）</li>
+<li>任何两次查询相交数据项不超过M个</li>
+<li>任一用户的查询次数不能超过1+(N-2)/M</li>
+</ul>
 <h2 id="ch7">CH7</h2>
+<p>数据库完整性防范对象：不合语义、不正确的数据。数据库安全性防范对象：非法用户、非法操作</p>
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">trig_name</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">table_name</span>
 <span class="w">  </span><span class="p">[</span><span class="k">AFTER</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">INSTEAD</span><span class="w"> </span><span class="k">OF</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="k">INSERT</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">DELETE</span><span class="p">]</span>
 <span class="w">  </span><span class="k">AS</span>
